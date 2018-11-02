@@ -23,6 +23,7 @@ import {
   isArrayOrTupleExpression,
   isObjectOrRecordExpression,
 } from "../utils/index.js";
+import isTypeCastComment from "../utils/is-type-cast-comment.js";
 
 /** @typedef {import("../../document/builders.js").Doc} Doc */
 
@@ -226,11 +227,14 @@ function printBinaryishExpressions(
   }
 
   const shouldInline = shouldInlineLogicalExpression(node);
-  const lineBeforeOperator =
-    (node.operator === "|>" ||
-      node.type === "NGPipeExpression" ||
-      isVueFilterSequenceExpression(path, options)) &&
-    !hasLeadingOwnLineComment(options.originalText, node.right);
+  const hasTypeCastComment = hasComment(
+    node.right,
+    CommentCheckFlags.Leading,
+    (comment) => isTypeCastComment(comment)
+  );
+  const commentBeforeOperator =
+    !hasTypeCastComment &&
+    hasLeadingOwnLineComment(options.originalText, node.right);
 
   const operator = node.type === "NGPipeExpression" ? "|" : node.operator;
   const rightSuffix =
@@ -267,13 +271,9 @@ function printBinaryishExpressions(
           "right"
         )
       : print("right");
-    right = [
-      lineBeforeOperator ? line : "",
-      operator,
-      lineBeforeOperator ? " " : line,
-      rightContent,
-      rightSuffix,
-    ];
+    // Place leading own line non-typecast comments before the operator.
+    const comment = commentBeforeOperator ? rightContent.splice(0, 1)[0] : "";
+    right = [line, comment, operator, " ", rightContent, rightSuffix];
   }
 
   // If there's only a single binary expression, we want to create a group
@@ -291,7 +291,7 @@ function printBinaryishExpressions(
       node.right.type !== node.type);
 
   parts.push(
-    lineBeforeOperator ? "" : " ",
+    !commentBeforeOperator && !shouldInline ? "" : " ",
     shouldGroup ? group(right, { shouldBreak }) : right
   );
 
@@ -332,20 +332,6 @@ function shouldInlineLogicalExpression(node) {
   }
 
   return false;
-}
-
-const isBitwiseOrExpression = (node) =>
-  node.type === "BinaryExpression" && node.operator === "|";
-
-function isVueFilterSequenceExpression(path, options) {
-  return (
-    (options.parser === "__vue_expression" ||
-      options.parser === "__vue_ts_expression") &&
-    isBitwiseOrExpression(path.node) &&
-    !path.hasAncestor(
-      (node) => !isBitwiseOrExpression(node) && node.type !== "JsExpressionRoot"
-    )
-  );
 }
 
 export { printBinaryishExpression, shouldInlineLogicalExpression };
