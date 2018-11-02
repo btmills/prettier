@@ -1036,8 +1036,8 @@ semi: false
 <template>
   <MyComponent
     :attr="
-      \`\${first} loooooooooooooooooooooooooooooooooooooooooooooooooooooooooooog \${template} \${literal}\` +
-      \`\${second} loooooooooooooooooooooooooooooooooooooooooooooooooooooooooooog \${template} \${literal}\`
+      \`\${first} loooooooooooooooooooooooooooooooooooooooooooooooooooooooooooog \${template} \${literal}\`
+      + \`\${second} loooooooooooooooooooooooooooooooooooooooooooooooooooooooooooog \${template} \${literal}\`
     "
   />
 </template>
@@ -1056,8 +1056,8 @@ semi: false
 <template>
   <MyComponent
     :src="
-      'first loooooooooooooooooooooooooooooooooooooooooooooooooooooooooooog' +
-      'second loooooooooooooooooooooooooooooooooooooooooooooooooooooooooooog'
+      'first loooooooooooooooooooooooooooooooooooooooooooooooooooooooooooog'
+      + 'second loooooooooooooooooooooooooooooooooooooooooooooooooooooooooooog'
     "
   />
 </template>
@@ -1110,8 +1110,8 @@ trailingComma: "none"
 <template>
   <MyComponent
     :attr="
-      \`\${first} loooooooooooooooooooooooooooooooooooooooooooooooooooooooooooog \${template} \${literal}\` +
-      \`\${second} loooooooooooooooooooooooooooooooooooooooooooooooooooooooooooog \${template} \${literal}\`
+      \`\${first} loooooooooooooooooooooooooooooooooooooooooooooooooooooooooooog \${template} \${literal}\`
+      + \`\${second} loooooooooooooooooooooooooooooooooooooooooooooooooooooooooooog \${template} \${literal}\`
     "
   />
 </template>
@@ -1130,8 +1130,8 @@ trailingComma: "none"
 <template>
   <MyComponent
     :src="
-      'first loooooooooooooooooooooooooooooooooooooooooooooooooooooooooooog' +
-      'second loooooooooooooooooooooooooooooooooooooooooooooooooooooooooooog'
+      'first loooooooooooooooooooooooooooooooooooooooooooooooooooooooooooog'
+      + 'second loooooooooooooooooooooooooooooooooooooooooooooooooooooooooooog'
     "
   />
 </template>
@@ -1183,8 +1183,8 @@ printWidth: 80
 <template>
   <MyComponent
     :attr="
-      \`\${first} loooooooooooooooooooooooooooooooooooooooooooooooooooooooooooog \${template} \${literal}\` +
-      \`\${second} loooooooooooooooooooooooooooooooooooooooooooooooooooooooooooog \${template} \${literal}\`
+      \`\${first} loooooooooooooooooooooooooooooooooooooooooooooooooooooooooooog \${template} \${literal}\`
+      + \`\${second} loooooooooooooooooooooooooooooooooooooooooooooooooooooooooooog \${template} \${literal}\`
     "
   />
 </template>
@@ -1203,8 +1203,8 @@ printWidth: 80
 <template>
   <MyComponent
     :src="
-      'first loooooooooooooooooooooooooooooooooooooooooooooooooooooooooooog' +
-      'second loooooooooooooooooooooooooooooooooooooooooooooooooooooooooooog'
+      'first loooooooooooooooooooooooooooooooooooooooooooooooooooooooooooog'
+      + 'second loooooooooooooooooooooooooooooooooooooooooooooooooooooooooooog'
     "
   />
 </template>
@@ -1266,10 +1266,10 @@ semi: false
   <div
     class="not-allowed"
     v-if="
-      value |
-        thisIsARealSuperLongFilterPipe('arg1', arg2) |
-        anotherPipeLongJustForFun |
-        pipeTheThird
+      value
+        | thisIsARealSuperLongFilterPipe('arg1', arg2)
+        | anotherPipeLongJustForFun
+        | pipeTheThird
     "
   ></div>
 </template>
@@ -1324,10 +1324,10 @@ trailingComma: "none"
   <div
     class="not-allowed"
     v-if="
-      value |
-        thisIsARealSuperLongFilterPipe('arg1', arg2) |
-        anotherPipeLongJustForFun |
-        pipeTheThird
+      value
+        | thisIsARealSuperLongFilterPipe('arg1', arg2)
+        | anotherPipeLongJustForFun
+        | pipeTheThird
     "
   ></div>
 </template>
@@ -1381,10 +1381,10 @@ printWidth: 80
   <div
     class="not-allowed"
     v-if="
-      value |
-        thisIsARealSuperLongFilterPipe('arg1', arg2) |
-        anotherPipeLongJustForFun |
-        pipeTheThird
+      value
+        | thisIsARealSuperLongFilterPipe('arg1', arg2)
+        | anotherPipeLongJustForFun
+        | pipeTheThird
     "
   ></div>
 </template>
@@ -2212,16 +2212,16 @@ semi: false
 <template>
   <pre class="woot">
   123{{
-      wqeqwwqwqweqweqwewwq ||
-      wqeqwwqwqweqweqwewwq ||
-      wqeqwwqwqweqweqwewwq ||
       wqeqwwqwqweqweqwewwq
+      || wqeqwwqwqweqweqwewwq
+      || wqeqwwqwqweqweqwewwq
+      || wqeqwwqwqweqweqwewwq
     }}123
   123{{
-      wqeqwwqwqweqweqwewwq ||
-      wqeqwwqwqweqweqwewwq ||
-      wqeqwwqwqweqweqwewwq ||
       wqeqwwqwqweqweqwewwq
+      || wqeqwwqwqweqweqwewwq
+      || wqeqwwqwqweqweqwewwq
+      || wqeqwwqwqweqweqwewwq
     }}123
     </pre
   >
@@ -2318,16 +2318,16 @@ trailingComma: "none"
 <template>
   <pre class="woot">
   123{{
-      wqeqwwqwqweqweqwewwq ||
-      wqeqwwqwqweqweqwewwq ||
-      wqeqwwqwqweqweqwewwq ||
       wqeqwwqwqweqweqwewwq
+      || wqeqwwqwqweqweqwewwq
+      || wqeqwwqwqweqweqwewwq
+      || wqeqwwqwqweqweqwewwq
     }}123
   123{{
-      wqeqwwqwqweqweqwewwq ||
-      wqeqwwqwqweqweqwewwq ||
-      wqeqwwqwqweqweqwewwq ||
       wqeqwwqwqweqweqwewwq
+      || wqeqwwqwqweqweqwewwq
+      || wqeqwwqwqweqweqwewwq
+      || wqeqwwqwqweqweqwewwq
     }}123
     </pre
   >
@@ -2423,16 +2423,16 @@ printWidth: 80
 <template>
   <pre class="woot">
   123{{
-      wqeqwwqwqweqweqwewwq ||
-      wqeqwwqwqweqweqwewwq ||
-      wqeqwwqwqweqweqwewwq ||
       wqeqwwqwqweqweqwewwq
+      || wqeqwwqwqweqweqwewwq
+      || wqeqwwqwqweqweqwewwq
+      || wqeqwwqwqweqweqwewwq
     }}123
   123{{
-      wqeqwwqwqweqweqwewwq ||
-      wqeqwwqwqweqweqwewwq ||
-      wqeqwwqwqweqweqwewwq ||
       wqeqwwqwqweqweqwewwq
+      || wqeqwwqwqweqweqwewwq
+      || wqeqwwqwqweqweqwewwq
+      || wqeqwwqwqweqweqwewwq
     }}123
     </pre
   >
@@ -3673,62 +3673,62 @@ long_long_long_long_long_long_long_condition_4
   <root>
     <and
       v-if="
-        long_long_long_long_long_long_long_condition_1 &&
-        long_long_long_long_long_long_long_condition_2 &&
-        short_1 &&
-        short_2 &&
-        long_long_long_long_long_long_long_condition_3 &&
-        long_long_long_long_long_long_long_condition_4
+        long_long_long_long_long_long_long_condition_1
+        && long_long_long_long_long_long_long_condition_2
+        && short_1
+        && short_2
+        && long_long_long_long_long_long_long_condition_3
+        && long_long_long_long_long_long_long_condition_4
       "
     ></and>
     <and
       v-if="
-        long_long_long_long_long_long_long_condition_1 &&
-        long_long_long_long_long_long_long_condition_2 &&
-        short_1 &&
-        short_2 &&
-        long_long_long_long_long_long_long_condition_3 &&
-        long_long_long_long_long_long_long_condition_4
+        long_long_long_long_long_long_long_condition_1
+        && long_long_long_long_long_long_long_condition_2
+        && short_1
+        && short_2
+        && long_long_long_long_long_long_long_condition_3
+        && long_long_long_long_long_long_long_condition_4
       "
     ></and>
     <or
       v-if="
-        long_long_long_long_long_long_long_condition_1 ||
-        long_long_long_long_long_long_long_condition_2 ||
-        short_1 ||
-        short_2 ||
-        long_long_long_long_long_long_long_condition_3 ||
-        long_long_long_long_long_long_long_condition_4
+        long_long_long_long_long_long_long_condition_1
+        || long_long_long_long_long_long_long_condition_2
+        || short_1
+        || short_2
+        || long_long_long_long_long_long_long_condition_3
+        || long_long_long_long_long_long_long_condition_4
       "
     ></or>
     <or
       v-if="
-        long_long_long_long_long_long_long_condition_1 ||
-        long_long_long_long_long_long_long_condition_2 ||
-        short_1 ||
-        short_2 ||
-        long_long_long_long_long_long_long_condition_3 ||
-        long_long_long_long_long_long_long_condition_4
+        long_long_long_long_long_long_long_condition_1
+        || long_long_long_long_long_long_long_condition_2
+        || short_1
+        || short_2
+        || long_long_long_long_long_long_long_condition_3
+        || long_long_long_long_long_long_long_condition_4
       "
     ></or>
     <mixed
       v-if="
-        (long_long_long_long_long_long_long_condition_1 &&
-          long_long_long_long_long_long_long_condition_2) ||
-        (short_1 &&
-          short_2 &&
-          long_long_long_long_long_long_long_condition_3 &&
-          long_long_long_long_long_long_long_condition_4)
+        (long_long_long_long_long_long_long_condition_1
+          && long_long_long_long_long_long_long_condition_2)
+        || (short_1
+          && short_2
+          && long_long_long_long_long_long_long_condition_3
+          && long_long_long_long_long_long_long_condition_4)
       "
     ></mixed>
     <mixed
       v-if="
-        (long_long_long_long_long_long_long_condition_1 &&
-          long_long_long_long_long_long_long_condition_2) ||
-        (short_1 &&
-          short_2 &&
-          long_long_long_long_long_long_long_condition_3) ||
-        long_long_long_long_long_long_long_condition_4
+        (long_long_long_long_long_long_long_condition_1
+          && long_long_long_long_long_long_long_condition_2)
+        || (short_1
+          && short_2
+          && long_long_long_long_long_long_long_condition_3)
+        || long_long_long_long_long_long_long_condition_4
       "
     ></mixed>
   </root>
@@ -3784,62 +3784,62 @@ long_long_long_long_long_long_long_condition_4
   <root>
     <and
       v-if="
-        long_long_long_long_long_long_long_condition_1 &&
-        long_long_long_long_long_long_long_condition_2 &&
-        short_1 &&
-        short_2 &&
-        long_long_long_long_long_long_long_condition_3 &&
-        long_long_long_long_long_long_long_condition_4
+        long_long_long_long_long_long_long_condition_1
+        && long_long_long_long_long_long_long_condition_2
+        && short_1
+        && short_2
+        && long_long_long_long_long_long_long_condition_3
+        && long_long_long_long_long_long_long_condition_4
       "
     ></and>
     <and
       v-if="
-        long_long_long_long_long_long_long_condition_1 &&
-        long_long_long_long_long_long_long_condition_2 &&
-        short_1 &&
-        short_2 &&
-        long_long_long_long_long_long_long_condition_3 &&
-        long_long_long_long_long_long_long_condition_4
+        long_long_long_long_long_long_long_condition_1
+        && long_long_long_long_long_long_long_condition_2
+        && short_1
+        && short_2
+        && long_long_long_long_long_long_long_condition_3
+        && long_long_long_long_long_long_long_condition_4
       "
     ></and>
     <or
       v-if="
-        long_long_long_long_long_long_long_condition_1 ||
-        long_long_long_long_long_long_long_condition_2 ||
-        short_1 ||
-        short_2 ||
-        long_long_long_long_long_long_long_condition_3 ||
-        long_long_long_long_long_long_long_condition_4
+        long_long_long_long_long_long_long_condition_1
+        || long_long_long_long_long_long_long_condition_2
+        || short_1
+        || short_2
+        || long_long_long_long_long_long_long_condition_3
+        || long_long_long_long_long_long_long_condition_4
       "
     ></or>
     <or
       v-if="
-        long_long_long_long_long_long_long_condition_1 ||
-        long_long_long_long_long_long_long_condition_2 ||
-        short_1 ||
-        short_2 ||
-        long_long_long_long_long_long_long_condition_3 ||
-        long_long_long_long_long_long_long_condition_4
+        long_long_long_long_long_long_long_condition_1
+        || long_long_long_long_long_long_long_condition_2
+        || short_1
+        || short_2
+        || long_long_long_long_long_long_long_condition_3
+        || long_long_long_long_long_long_long_condition_4
       "
     ></or>
     <mixed
       v-if="
-        (long_long_long_long_long_long_long_condition_1 &&
-          long_long_long_long_long_long_long_condition_2) ||
-        (short_1 &&
-          short_2 &&
-          long_long_long_long_long_long_long_condition_3 &&
-          long_long_long_long_long_long_long_condition_4)
+        (long_long_long_long_long_long_long_condition_1
+          && long_long_long_long_long_long_long_condition_2)
+        || (short_1
+          && short_2
+          && long_long_long_long_long_long_long_condition_3
+          && long_long_long_long_long_long_long_condition_4)
       "
     ></mixed>
     <mixed
       v-if="
-        (long_long_long_long_long_long_long_condition_1 &&
-          long_long_long_long_long_long_long_condition_2) ||
-        (short_1 &&
-          short_2 &&
-          long_long_long_long_long_long_long_condition_3) ||
-        long_long_long_long_long_long_long_condition_4
+        (long_long_long_long_long_long_long_condition_1
+          && long_long_long_long_long_long_long_condition_2)
+        || (short_1
+          && short_2
+          && long_long_long_long_long_long_long_condition_3)
+        || long_long_long_long_long_long_long_condition_4
       "
     ></mixed>
   </root>
@@ -3894,62 +3894,62 @@ long_long_long_long_long_long_long_condition_4
   <root>
     <and
       v-if="
-        long_long_long_long_long_long_long_condition_1 &&
-        long_long_long_long_long_long_long_condition_2 &&
-        short_1 &&
-        short_2 &&
-        long_long_long_long_long_long_long_condition_3 &&
-        long_long_long_long_long_long_long_condition_4
+        long_long_long_long_long_long_long_condition_1
+        && long_long_long_long_long_long_long_condition_2
+        && short_1
+        && short_2
+        && long_long_long_long_long_long_long_condition_3
+        && long_long_long_long_long_long_long_condition_4
       "
     ></and>
     <and
       v-if="
-        long_long_long_long_long_long_long_condition_1 &&
-        long_long_long_long_long_long_long_condition_2 &&
-        short_1 &&
-        short_2 &&
-        long_long_long_long_long_long_long_condition_3 &&
-        long_long_long_long_long_long_long_condition_4
+        long_long_long_long_long_long_long_condition_1
+        && long_long_long_long_long_long_long_condition_2
+        && short_1
+        && short_2
+        && long_long_long_long_long_long_long_condition_3
+        && long_long_long_long_long_long_long_condition_4
       "
     ></and>
     <or
       v-if="
-        long_long_long_long_long_long_long_condition_1 ||
-        long_long_long_long_long_long_long_condition_2 ||
-        short_1 ||
-        short_2 ||
-        long_long_long_long_long_long_long_condition_3 ||
-        long_long_long_long_long_long_long_condition_4
+        long_long_long_long_long_long_long_condition_1
+        || long_long_long_long_long_long_long_condition_2
+        || short_1
+        || short_2
+        || long_long_long_long_long_long_long_condition_3
+        || long_long_long_long_long_long_long_condition_4
       "
     ></or>
     <or
       v-if="
-        long_long_long_long_long_long_long_condition_1 ||
-        long_long_long_long_long_long_long_condition_2 ||
-        short_1 ||
-        short_2 ||
-        long_long_long_long_long_long_long_condition_3 ||
-        long_long_long_long_long_long_long_condition_4
+        long_long_long_long_long_long_long_condition_1
+        || long_long_long_long_long_long_long_condition_2
+        || short_1
+        || short_2
+        || long_long_long_long_long_long_long_condition_3
+        || long_long_long_long_long_long_long_condition_4
       "
     ></or>
     <mixed
       v-if="
-        (long_long_long_long_long_long_long_condition_1 &&
-          long_long_long_long_long_long_long_condition_2) ||
-        (short_1 &&
-          short_2 &&
-          long_long_long_long_long_long_long_condition_3 &&
-          long_long_long_long_long_long_long_condition_4)
+        (long_long_long_long_long_long_long_condition_1
+          && long_long_long_long_long_long_long_condition_2)
+        || (short_1
+          && short_2
+          && long_long_long_long_long_long_long_condition_3
+          && long_long_long_long_long_long_long_condition_4)
       "
     ></mixed>
     <mixed
       v-if="
-        (long_long_long_long_long_long_long_condition_1 &&
-          long_long_long_long_long_long_long_condition_2) ||
-        (short_1 &&
-          short_2 &&
-          long_long_long_long_long_long_long_condition_3) ||
-        long_long_long_long_long_long_long_condition_4
+        (long_long_long_long_long_long_long_condition_1
+          && long_long_long_long_long_long_long_condition_2)
+        || (short_1
+          && short_2
+          && long_long_long_long_long_long_long_condition_3)
+        || long_long_long_long_long_long_long_condition_4
       "
     ></mixed>
   </root>
