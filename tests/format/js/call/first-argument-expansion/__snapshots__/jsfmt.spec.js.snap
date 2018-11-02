@@ -36,8 +36,8 @@ call(
   function () {
     return 1;
   },
-  (200_000_000_000n * askTrovenaBeenaDependsRowans) /
-    glimseGlyphsHazardNoopsTieTie,
+  (200_000_000_000n * askTrovenaBeenaDependsRowans)
+    / glimseGlyphsHazardNoopsTieTie,
 );
 
 call(
@@ -67,12 +67,12 @@ f(
   (x) => {
     y;
   },
-  err.message.includes("asd") &&
-    err.message.includes("id") &&
-    err.message.includes('"1"') &&
-    err.message.includes("Model") &&
-    err.message.includes("/id") &&
-    err.message.includes("identifier(number)"),
+  err.message.includes("asd")
+    && err.message.includes("id")
+    && err.message.includes('"1"')
+    && err.message.includes("Model")
+    && err.message.includes("/id")
+    && err.message.includes("identifier(number)"),
 );
 
 ================================================================================
@@ -126,24 +126,24 @@ call(
   function () {
     return 1;
   },
-  $var ??
-    $var ??
-    $var ??
-    $var ??
-    $var ??
-    $var ??
-    $var ??
-    $var ??
-    $var ??
-    "test",
+  $var
+    ?? $var
+    ?? $var
+    ?? $var
+    ?? $var
+    ?? $var
+    ?? $var
+    ?? $var
+    ?? $var
+    ?? "test",
 );
 
 call(
   function () {
     return 1;
   },
-  $var ||
-    ($var ?? $var ?? $var ?? $var ?? $var ?? $var ?? $var ?? $var ?? "test"),
+  $var
+    || ($var ?? $var ?? $var ?? $var ?? $var ?? $var ?? $var ?? $var ?? "test"),
 );
 
 ================================================================================
