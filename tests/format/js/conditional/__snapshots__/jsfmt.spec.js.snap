@@ -807,8 +807,8 @@ inJSXExpressionContainer.withLoops.orBooleans.example = (
       )
     : null}
 
-    {showTheStuff &&
-      (foo ?
+    {showTheStuff
+      && (foo ?
         <Thing thing={foooooooooooooooooooooooooo} bar="bazzzzzz" />
       : <OtherThing />)}
   </div>
@@ -821,10 +821,10 @@ inJSXExpressionContainer.withNullConditional = (
       <Foo />
     )}
     {(
-      isACat() &&
-      (someReallyLongCondition ||
-        moreInThisLongCondition ||
-        evenMoreInThisExtraLongConditional)
+      isACat()
+      && (someReallyLongCondition
+        || moreInThisLongCondition
+        || evenMoreInThisExtraLongConditional)
     ) ?
       null
     : <Foo />}
@@ -1102,8 +1102,8 @@ inJSXExpressionContainer.withLoops.orBooleans.example = (
         )
       : null}
 
-    {showTheStuff &&
-      (foo ? (
+    {showTheStuff
+      && (foo ? (
         <Thing thing={foooooooooooooooooooooooooo} bar="bazzzzzz" />
       ) : (
         <OtherThing />
@@ -1117,10 +1117,10 @@ inJSXExpressionContainer.withNullConditional = (
     {isACat() && (someReallyLongCondition || moreInThisLongCondition) ? null : (
       <Foo />
     )}
-    {isACat() &&
-    (someReallyLongCondition ||
-      moreInThisLongCondition ||
-      evenMoreInThisExtraLongConditional) ? null : (
+    {isACat()
+    && (someReallyLongCondition
+      || moreInThisLongCondition
+      || evenMoreInThisExtraLongConditional) ? null : (
       <Foo />
     )}
   </div>
@@ -1392,15 +1392,15 @@ const consequentAndTerminalAlternateBreak =
 // multiline conditions and consequents/alternates:
 const multilineConditionsConsequentsAndAlternates =
   (
-    isAnAdorableKittyCat() &&
-    (someReallyLongCondition || moreInThisLongCondition)
+    isAnAdorableKittyCat()
+    && (someReallyLongCondition || moreInThisLongCondition)
   ) ?
     someReallyLargeExpression
       .thatWouldCauseALineBreak()
       .willCauseAnIndentButNotParens()
   : (
-    isNotAnAdorableKittyCat() &&
-    (someReallyLongCondition || moreInThisLongCondition)
+    isNotAnAdorableKittyCat()
+    && (someReallyLongCondition || moreInThisLongCondition)
   ) ?
     bark()
   : shortCondition() ? shortConsequent()
@@ -1414,9 +1414,9 @@ const mostlyShort =
   : x === 2 ? "two"
   : x === 3 ? "three"
   : (
-    x === 5 &&
-    y === 7 &&
-    someOtherThing.thatIsSoLong.thatItBreaksTheTestCondition()
+    x === 5
+    && y === 7
+    && someOtherThing.thatIsSoLong.thatItBreaksTheTestCondition()
   ) ?
     "four"
   : x === 6 ? "six"
@@ -1425,9 +1425,9 @@ const mostlyShort =
 // long conditional, short consequent/alternate, not chained - do indent after ?
 const longConditional =
   (
-    bifornCringerMoshedPerplexSawder === 2 / askTrovenaBeenaDependsRowans &&
-    glimseGlyphsHazardNoopsTieTie >=
-      averredBathersBoxroomBuggyNurl().anodyneCondosMalateOverateRetinol()
+    bifornCringerMoshedPerplexSawder === 2 / askTrovenaBeenaDependsRowans
+    && glimseGlyphsHazardNoopsTieTie
+      >= averredBathersBoxroomBuggyNurl().anodyneCondosMalateOverateRetinol()
   ) ?
     "foo"
   : "bar";
@@ -1436,9 +1436,9 @@ const longConditional =
 // (break on short consequents iff in chained ternary and its conditional broke)
 const longConditionalChained =
   (
-    bifornCringerMoshedPerplexSawder === 2 / askTrovenaBeenaDependsRowans &&
-    glimseGlyphsHazardNoopsTieTie >=
-      averredBathersBoxroomBuggyNurl().anodyneCondosMalateOverateRetinol()
+    bifornCringerMoshedPerplexSawder === 2 / askTrovenaBeenaDependsRowans
+    && glimseGlyphsHazardNoopsTieTie
+      >= averredBathersBoxroomBuggyNurl().anodyneCondosMalateOverateRetinol()
   ) ?
     "foo"
   : anotherCondition ? "bar"
@@ -1792,8 +1792,8 @@ const multilineConditionsConsequentsAndAlternates =
     ? someReallyLargeExpression
         .thatWouldCauseALineBreak()
         .willCauseAnIndentButNotParens()
-    : isNotAnAdorableKittyCat() &&
-        (someReallyLongCondition || moreInThisLongCondition)
+    : isNotAnAdorableKittyCat()
+        && (someReallyLongCondition || moreInThisLongCondition)
       ? bark()
       : shortCondition()
         ? shortConsequent()
@@ -1809,9 +1809,9 @@ const mostlyShort =
       ? "two"
       : x === 3
         ? "three"
-        : x === 5 &&
-            y === 7 &&
-            someOtherThing.thatIsSoLong.thatItBreaksTheTestCondition()
+        : x === 5
+            && y === 7
+            && someOtherThing.thatIsSoLong.thatItBreaksTheTestCondition()
           ? "four"
           : x === 6
             ? "six"
@@ -1819,18 +1819,18 @@ const mostlyShort =
 
 // long conditional, short consequent/alternate, not chained - do indent after ?
 const longConditional =
-  bifornCringerMoshedPerplexSawder === 2 / askTrovenaBeenaDependsRowans &&
-  glimseGlyphsHazardNoopsTieTie >=
-    averredBathersBoxroomBuggyNurl().anodyneCondosMalateOverateRetinol()
+  bifornCringerMoshedPerplexSawder === 2 / askTrovenaBeenaDependsRowans
+  && glimseGlyphsHazardNoopsTieTie
+    >= averredBathersBoxroomBuggyNurl().anodyneCondosMalateOverateRetinol()
     ? "foo"
     : "bar";
 
 // long conditional, short consequent/alternate, chained
 // (break on short consequents iff in chained ternary and its conditional broke)
 const longConditionalChained =
-  bifornCringerMoshedPerplexSawder === 2 / askTrovenaBeenaDependsRowans &&
-  glimseGlyphsHazardNoopsTieTie >=
-    averredBathersBoxroomBuggyNurl().anodyneCondosMalateOverateRetinol()
+  bifornCringerMoshedPerplexSawder === 2 / askTrovenaBeenaDependsRowans
+  && glimseGlyphsHazardNoopsTieTie
+    >= averredBathersBoxroomBuggyNurl().anodyneCondosMalateOverateRetinol()
     ? "foo"
     : anotherCondition
       ? "bar"
@@ -2143,26 +2143,26 @@ const anotherBadComment =
 // … or maybe this is okay, because the colon is enough?
 const avatar =
   has_ordered ?
-    "https://marmelab.com/posters/avatar/longer-word-that-breaks-consequent-" +
-    numberOfCustomers +
-    ".jpeg"
+    "https://marmelab.com/posters/avatar/longer-word-that-breaks-consequent-"
+    + numberOfCustomers
+    + ".jpeg"
   : undefined;
 
 // Similarly, in the alternate:
 const redirectUrl =
   pathName ? pathName : (
-    nextPathName + nextSearch ||
-    defaultAuthParams.afterLoginUrl.makeThisLongerSoItBreaks
+    nextPathName + nextSearch
+    || defaultAuthParams.afterLoginUrl.makeThisLongerSoItBreaks
   );
 
 // And another, more pathological case of the above:
 const isEmpty = (obj) =>
   obj instanceof Date ? false : (
-    obj === "" ||
-    obj === null ||
-    obj === undefined ||
-    obj === somethingThatIsLonger ||
-    shallowEqual(obj, {})
+    obj === ""
+    || obj === null
+    || obj === undefined
+    || obj === somethingThatIsLonger
+    || shallowEqual(obj, {})
   );
 
 // Again, this case is a bit hard to distinguish the alternate.
@@ -2204,10 +2204,10 @@ const matchingReferencesError =
 const obj = {
   error:
     (
-      matchingReferencesError &&
-      (!input.value ||
-        (input.value &&
-          selectedReferencesDataStatus === REFERENCES_STATUS_EMPTY))
+      matchingReferencesError
+      && (!input.value
+        || (input.value
+          && selectedReferencesDataStatus === REFERENCES_STATUS_EMPTY))
     ) ?
       translate("ra.input.references.all_missing", {
         _: "ra.input.references.all_missing",
@@ -2219,11 +2219,12 @@ const obj = {
 const obj2 = {
   warning:
     (
-      matchingReferencesError ||
-      (input.value && selectedReferencesDataStatus !== REFERENCES_STATUS_READY)
+      matchingReferencesError
+      || (input.value
+        && selectedReferencesDataStatus !== REFERENCES_STATUS_READY)
     ) ?
-      matchingReferencesError ||
-      translate("ra.input.references.many_missing", {
+      matchingReferencesError
+      || translate("ra.input.references.many_missing", {
         _: "ra.input.references.many_missing",
       })
     : null,
@@ -2477,26 +2478,26 @@ const anotherBadComment =
 // concatened string in consequent should be visually distinguishable from alternate
 // … or maybe this is okay, because the colon is enough?
 const avatar = has_ordered
-  ? "https://marmelab.com/posters/avatar/longer-word-that-breaks-consequent-" +
-    numberOfCustomers +
-    ".jpeg"
+  ? "https://marmelab.com/posters/avatar/longer-word-that-breaks-consequent-"
+    + numberOfCustomers
+    + ".jpeg"
   : undefined;
 
 // Similarly, in the alternate:
 const redirectUrl = pathName
   ? pathName
-  : nextPathName + nextSearch ||
-    defaultAuthParams.afterLoginUrl.makeThisLongerSoItBreaks;
+  : nextPathName + nextSearch
+    || defaultAuthParams.afterLoginUrl.makeThisLongerSoItBreaks;
 
 // And another, more pathological case of the above:
 const isEmpty = (obj) =>
   obj instanceof Date
     ? false
-    : obj === "" ||
-      obj === null ||
-      obj === undefined ||
-      obj === somethingThatIsLonger ||
-      shallowEqual(obj, {});
+    : obj === ""
+      || obj === null
+      || obj === undefined
+      || obj === somethingThatIsLonger
+      || shallowEqual(obj, {});
 
 // Again, this case is a bit hard to distinguish the alternate.
 const eventsFromOrders =
@@ -2534,9 +2535,10 @@ const matchingReferencesError = isMatchingReferencesError(matchingReferences)
 // This one is kinda confusing any way you slice it…
 const obj = {
   error:
-    matchingReferencesError &&
-    (!input.value ||
-      (input.value && selectedReferencesDataStatus === REFERENCES_STATUS_EMPTY))
+    matchingReferencesError
+    && (!input.value
+      || (input.value
+        && selectedReferencesDataStatus === REFERENCES_STATUS_EMPTY))
       ? translate("ra.input.references.all_missing", {
           _: "ra.input.references.all_missing",
         })
@@ -2546,10 +2548,10 @@ const obj = {
 // I think we should indent after the inner || on this, and do better wtih the parens around the &&
 const obj2 = {
   warning:
-    matchingReferencesError ||
-    (input.value && selectedReferencesDataStatus !== REFERENCES_STATUS_READY)
-      ? matchingReferencesError ||
-        translate("ra.input.references.many_missing", {
+    matchingReferencesError
+    || (input.value && selectedReferencesDataStatus !== REFERENCES_STATUS_READY)
+      ? matchingReferencesError
+        || translate("ra.input.references.many_missing", {
           _: "ra.input.references.many_missing",
         })
       : null,
