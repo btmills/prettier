@@ -1253,8 +1253,8 @@ foo(
 
 foo(
   (
-    a = 1 +
-      f({
+    a = 1
+      + f({
         a,
 
         b,
@@ -2050,8 +2050,8 @@ foo(
 
 foo(
   (
-    a = 1 +
-      f({
+    a = 1
+      + f({
         a,
 
         b,
@@ -2256,8 +2256,8 @@ const x = a.b ?? (
 
 =====================================output=====================================
 const x =
-  a.b ??
-  ((
+  a.b
+  ?? ((
     c = "abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdef",
     d = "abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdef",
   ) =>
@@ -2285,8 +2285,8 @@ const x = a.b ?? (
 
 =====================================output=====================================
 const x =
-  a.b ??
-  ((
+  a.b
+  ?? ((
     c = "abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdef",
     d = "abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdef",
   ) =>
