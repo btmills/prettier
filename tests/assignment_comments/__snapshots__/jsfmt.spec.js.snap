@@ -91,18 +91,18 @@ var fnString =
   "some" + "long" + "string";
 
 var fnString =
-  /* inline */ "some" +
-  "long" +
-  "string" +
-  "some" +
-  "long" +
-  "string" +
-  "some" +
-  "long" +
-  "string" +
-  "some" +
-  "long" +
-  "string";
+  /* inline */ "some"
+  + "long"
+  + "string"
+  + "some"
+  + "long"
+  + "string"
+  + "some"
+  + "long"
+  + "string"
+  + "some"
+  + "long"
+  + "string";
 
 var fnString = // Comment
   // Comment

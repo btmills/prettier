@@ -274,25 +274,25 @@ printWidth: 80
   *directive="a; b: c as d"
   *directive="a; b as c"
   *ngIf="
-    listRow.NextScheduledSendStatus == 1 ||
-    listRow.NextScheduledSendStatus == 2 ||
-    listRow.NextScheduledSendStatus == 3
+    listRow.NextScheduledSendStatus == 1
+    || listRow.NextScheduledSendStatus == 2
+    || listRow.NextScheduledSendStatus == 3
   "
   *ngIf="
-    listRow.NextScheduledSendStatus == 1 ||
-      listRow.NextScheduledSendStatus == 2 ||
-      listRow.NextScheduledSendStatus == 3;
+    listRow.NextScheduledSendStatus == 1
+      || listRow.NextScheduledSendStatus == 2
+      || listRow.NextScheduledSendStatus == 3;
     else hello
   "
   (target)="
-    (listRow.NextScheduledSendStatus == 1 ||
-      listRow.NextScheduledSendStatus == 2 ||
-      listRow.NextScheduledSendStatus == 3)
+    (listRow.NextScheduledSendStatus == 1
+      || listRow.NextScheduledSendStatus == 2
+      || listRow.NextScheduledSendStatus == 3)
   "
   [target]="
-    listRow.NextScheduledSendStatus == 1 ||
-    listRow.NextScheduledSendStatus == 2 ||
-    listRow.NextScheduledSendStatus == 3
+    listRow.NextScheduledSendStatus == 1
+    || listRow.NextScheduledSendStatus == 2
+    || listRow.NextScheduledSendStatus == 3
   "
   [target]="{
     longlonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglong: true
@@ -546,25 +546,25 @@ trailingComma: "es5"
   *directive="a; b: c as d"
   *directive="a; b as c"
   *ngIf="
-    listRow.NextScheduledSendStatus == 1 ||
-    listRow.NextScheduledSendStatus == 2 ||
-    listRow.NextScheduledSendStatus == 3
+    listRow.NextScheduledSendStatus == 1
+    || listRow.NextScheduledSendStatus == 2
+    || listRow.NextScheduledSendStatus == 3
   "
   *ngIf="
-    listRow.NextScheduledSendStatus == 1 ||
-      listRow.NextScheduledSendStatus == 2 ||
-      listRow.NextScheduledSendStatus == 3;
+    listRow.NextScheduledSendStatus == 1
+      || listRow.NextScheduledSendStatus == 2
+      || listRow.NextScheduledSendStatus == 3;
     else hello
   "
   (target)="
-    (listRow.NextScheduledSendStatus == 1 ||
-      listRow.NextScheduledSendStatus == 2 ||
-      listRow.NextScheduledSendStatus == 3)
+    (listRow.NextScheduledSendStatus == 1
+      || listRow.NextScheduledSendStatus == 2
+      || listRow.NextScheduledSendStatus == 3)
   "
   [target]="
-    listRow.NextScheduledSendStatus == 1 ||
-    listRow.NextScheduledSendStatus == 2 ||
-    listRow.NextScheduledSendStatus == 3
+    listRow.NextScheduledSendStatus == 1
+    || listRow.NextScheduledSendStatus == 2
+    || listRow.NextScheduledSendStatus == 3
   "
   [target]="{
     longlonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglong: true
@@ -763,8 +763,8 @@ printWidth: 1
       | pipe
   "
   [target]="
-    0 -
-    1
+    0
+    - 1
   "
   [target]="
     -1
@@ -900,19 +900,19 @@ printWidth: 1
     hello()
   "
   (event)="
-    (a &&
-      b)
+    (a
+      && b)
   "
   (event)="
-    a &&
-      b()
+    a
+      && b()
   "
   (event)="
     foo = $event
   "
   (event)="
-    (foo ==
-      $event)
+    (foo
+      == $event)
   "
   *ngIf="
     something
@@ -1008,37 +1008,37 @@ printWidth: 1
     b as c
   "
   *ngIf="
-    listRow.NextScheduledSendStatus ==
-      1 ||
-    listRow.NextScheduledSendStatus ==
-      2 ||
-    listRow.NextScheduledSendStatus ==
-      3
+    listRow.NextScheduledSendStatus
+      == 1
+    || listRow.NextScheduledSendStatus
+      == 2
+    || listRow.NextScheduledSendStatus
+      == 3
   "
   *ngIf="
-    listRow.NextScheduledSendStatus ==
-      1 ||
-      listRow.NextScheduledSendStatus ==
-        2 ||
-      listRow.NextScheduledSendStatus ==
-        3;
+    listRow.NextScheduledSendStatus
+      == 1
+      || listRow.NextScheduledSendStatus
+        == 2
+      || listRow.NextScheduledSendStatus
+        == 3;
     else hello
   "
   (target)="
-    (listRow.NextScheduledSendStatus ==
-      1 ||
-      listRow.NextScheduledSendStatus ==
-        2 ||
-      listRow.NextScheduledSendStatus ==
-        3)
+    (listRow.NextScheduledSendStatus
+      == 1
+      || listRow.NextScheduledSendStatus
+        == 2
+      || listRow.NextScheduledSendStatus
+        == 3)
   "
   [target]="
-    listRow.NextScheduledSendStatus ==
-      1 ||
-    listRow.NextScheduledSendStatus ==
-      2 ||
-    listRow.NextScheduledSendStatus ==
-      3
+    listRow.NextScheduledSendStatus
+      == 1
+    || listRow.NextScheduledSendStatus
+      == 2
+    || listRow.NextScheduledSendStatus
+      == 3
   "
   [target]="{
     longlonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglong: true
@@ -1061,22 +1061,22 @@ printWidth: 1
         dialog$
         | async
       )
-        .level ===
-      dialogLevelEnum.SUCCESS,
+        .level
+      === dialogLevelEnum.SUCCESS,
     'btn-warning':
       (
         dialog$
         | async
       )
-        .level ===
-      dialogLevelEnum.WARNING,
+        .level
+      === dialogLevelEnum.WARNING,
     'btn-svg':
       (
         dialog$
         | async
       )
-        .level ===
-      dialogLevelEnum.DANGER
+        .level
+      === dialogLevelEnum.DANGER
   }"
   [stickout]="
     +toolAssembly.stickoutMm
@@ -1421,25 +1421,25 @@ printWidth: 80
   *directive="a; b: c as d"
   *directive="a; b as c"
   *ngIf="
-    listRow.NextScheduledSendStatus == 1 ||
-    listRow.NextScheduledSendStatus == 2 ||
-    listRow.NextScheduledSendStatus == 3
+    listRow.NextScheduledSendStatus == 1
+    || listRow.NextScheduledSendStatus == 2
+    || listRow.NextScheduledSendStatus == 3
   "
   *ngIf="
-    listRow.NextScheduledSendStatus == 1 ||
-      listRow.NextScheduledSendStatus == 2 ||
-      listRow.NextScheduledSendStatus == 3;
+    listRow.NextScheduledSendStatus == 1
+      || listRow.NextScheduledSendStatus == 2
+      || listRow.NextScheduledSendStatus == 3;
     else hello
   "
   (target)="
-    (listRow.NextScheduledSendStatus == 1 ||
-      listRow.NextScheduledSendStatus == 2 ||
-      listRow.NextScheduledSendStatus == 3)
+    (listRow.NextScheduledSendStatus == 1
+      || listRow.NextScheduledSendStatus == 2
+      || listRow.NextScheduledSendStatus == 3)
   "
   [target]="
-    listRow.NextScheduledSendStatus == 1 ||
-    listRow.NextScheduledSendStatus == 2 ||
-    listRow.NextScheduledSendStatus == 3
+    listRow.NextScheduledSendStatus == 1
+    || listRow.NextScheduledSendStatus == 2
+    || listRow.NextScheduledSendStatus == 3
   "
   [target]="{
     longlonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglong: true
@@ -1693,25 +1693,25 @@ printWidth: 80
   *directive="a; b: c as d"
   *directive="a; b as c"
   *ngIf="
-    listRow.NextScheduledSendStatus == 1 ||
-    listRow.NextScheduledSendStatus == 2 ||
-    listRow.NextScheduledSendStatus == 3
+    listRow.NextScheduledSendStatus == 1
+    || listRow.NextScheduledSendStatus == 2
+    || listRow.NextScheduledSendStatus == 3
   "
   *ngIf="
-    listRow.NextScheduledSendStatus == 1 ||
-      listRow.NextScheduledSendStatus == 2 ||
-      listRow.NextScheduledSendStatus == 3;
+    listRow.NextScheduledSendStatus == 1
+      || listRow.NextScheduledSendStatus == 2
+      || listRow.NextScheduledSendStatus == 3;
     else hello
   "
   (target)="
-    (listRow.NextScheduledSendStatus == 1 ||
-      listRow.NextScheduledSendStatus == 2 ||
-      listRow.NextScheduledSendStatus == 3)
+    (listRow.NextScheduledSendStatus == 1
+      || listRow.NextScheduledSendStatus == 2
+      || listRow.NextScheduledSendStatus == 3)
   "
   [target]="
-    listRow.NextScheduledSendStatus == 1 ||
-    listRow.NextScheduledSendStatus == 2 ||
-    listRow.NextScheduledSendStatus == 3
+    listRow.NextScheduledSendStatus == 1
+    || listRow.NextScheduledSendStatus == 2
+    || listRow.NextScheduledSendStatus == 3
   "
   [target]="{
     longlonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglong: true
@@ -2761,9 +2761,9 @@ printWidth: 80
   {{ copyTypes[options.copyType] }}
 </div>
 {{
-  listRow.NextScheduledSendStatus == 1 ||
-    listRow.NextScheduledSendStatus == 2 ||
-    listRow.NextScheduledSendStatus == 3
+  listRow.NextScheduledSendStatus == 1
+    || listRow.NextScheduledSendStatus == 2
+    || listRow.NextScheduledSendStatus == 3
 }}
 <span
   ><!--
@@ -2928,9 +2928,9 @@ trailingComma: "es5"
   {{ copyTypes[options.copyType] }}
 </div>
 {{
-  listRow.NextScheduledSendStatus == 1 ||
-    listRow.NextScheduledSendStatus == 2 ||
-    listRow.NextScheduledSendStatus == 3
+  listRow.NextScheduledSendStatus == 1
+    || listRow.NextScheduledSendStatus == 2
+    || listRow.NextScheduledSendStatus == 3
 }}
 <span
   ><!--
@@ -3049,8 +3049,8 @@ printWidth: 1
 </div>
 <div>
   {{
-    0 -
-      1
+    0
+      - 1
   }}
 </div>
 <div>
@@ -3246,12 +3246,12 @@ printWidth: 1
   }}
 </div>
 {{
-  listRow.NextScheduledSendStatus ==
-    1 ||
-    listRow.NextScheduledSendStatus ==
-      2 ||
-    listRow.NextScheduledSendStatus ==
-      3
+  listRow.NextScheduledSendStatus
+    == 1
+    || listRow.NextScheduledSendStatus
+      == 2
+    || listRow.NextScheduledSendStatus
+      == 3
 }}
 <span
   ><!--
@@ -3297,8 +3297,8 @@ printWidth: 1
   {{
     {
       a:
-        1 +
-        {}
+        1
+        + {}
     }
   }}
 </p>
@@ -3306,8 +3306,8 @@ printWidth: 1
   {{
     {
       a:
-        a ===
-        {}
+        a
+        === {}
     }
   }}
 </p>
@@ -3470,9 +3470,9 @@ printWidth: 80
   {{ copyTypes[options.copyType] }}
 </div>
 {{
-  listRow.NextScheduledSendStatus == 1 ||
-    listRow.NextScheduledSendStatus == 2 ||
-    listRow.NextScheduledSendStatus == 3
+  listRow.NextScheduledSendStatus == 1
+    || listRow.NextScheduledSendStatus == 2
+    || listRow.NextScheduledSendStatus == 3
 }}
 <span>
   <!--
@@ -3639,9 +3639,9 @@ printWidth: 80
   {{ copyTypes[options.copyType] }}
 </div>
 {{
-  listRow.NextScheduledSendStatus == 1 ||
-    listRow.NextScheduledSendStatus == 2 ||
-    listRow.NextScheduledSendStatus == 3
+  listRow.NextScheduledSendStatus == 1
+    || listRow.NextScheduledSendStatus == 2
+    || listRow.NextScheduledSendStatus == 3
 }}
 <span
   ><!--
@@ -7659,8 +7659,8 @@ can be found in the LICENSE file at http://angular.io/license
   1
   is
   {{
-    1 +
-      1
+    1
+      + 1
   }}
 </p>
 
@@ -7675,9 +7675,9 @@ can be found in the LICENSE file at http://angular.io/license
   is
   not
   {{
-    1 +
-      1 +
-      getVal()
+    1
+      + 1
+      + getVal()
   }}
 </p>
 
@@ -8320,8 +8320,8 @@ can be found in the LICENSE file at http://angular.io/license
   <tr>
     <td
       [attr.colspan]="
-        1 +
         1
+        + 1
       "
     >
       One-Two
@@ -9258,8 +9258,8 @@ bindon-ngModel
     "
   >
     {{
-      i +
-        1
+      i
+        + 1
     }}
     -
     {{
@@ -9286,8 +9286,8 @@ bindon-ngModel
     "
   >
     {{
-      i +
-        1
+      i
+        + 1
     }}
     -
     {{
@@ -9669,8 +9669,8 @@ bindon-ngModel
   #btn
   disabled
   [innerHTML]="
-    'disabled by attribute: ' +
-    btn.disabled
+    'disabled by attribute: '
+    + btn.disabled
   "
 ></button>
 
@@ -9895,8 +9895,8 @@ See console log:
   name
   is
   {{
-    nullHero &&
-      nullHero.name
+    nullHero
+      && nullHero.name
   }}
 </div>
 
