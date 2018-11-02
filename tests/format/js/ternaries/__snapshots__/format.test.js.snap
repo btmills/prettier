@@ -24,9 +24,9 @@ room = room.map((row, rowIndex) => (
 =====================================output=====================================
 const funnelSnapshotCard =
     (
-        (report === MY_OVERVIEW && !ReportGK.xar_metrics_active_capitol_v2) ||
-        (report === COMPANY_OVERVIEW &&
-            !ReportGK.xar_metrics_active_capitol_v2_company_metrics)
+        (report === MY_OVERVIEW && !ReportGK.xar_metrics_active_capitol_v2)
+        || (report === COMPANY_OVERVIEW
+            && !ReportGK.xar_metrics_active_capitol_v2_company_metrics)
     ) ?
         <ReportMetricsFunnelSnapshotCard metrics={metrics} />
     :   null;
@@ -34,10 +34,10 @@ const funnelSnapshotCard =
 room = room.map((row, rowIndex) =>
     row.map((col, colIndex) =>
         (
-            rowIndex === 0 ||
-            colIndex === 0 ||
-            rowIndex === height ||
-            colIndex === width
+            rowIndex === 0
+            || colIndex === 0
+            || rowIndex === height
+            || colIndex === width
         ) ?
             1
         :   0,
@@ -72,9 +72,9 @@ room = room.map((row, rowIndex) => (
 =====================================output=====================================
 const funnelSnapshotCard =
 	(
-		(report === MY_OVERVIEW && !ReportGK.xar_metrics_active_capitol_v2) ||
-		(report === COMPANY_OVERVIEW &&
-			!ReportGK.xar_metrics_active_capitol_v2_company_metrics)
+		(report === MY_OVERVIEW && !ReportGK.xar_metrics_active_capitol_v2)
+		|| (report === COMPANY_OVERVIEW
+			&& !ReportGK.xar_metrics_active_capitol_v2_company_metrics)
 	) ?
 		<ReportMetricsFunnelSnapshotCard metrics={metrics} />
 	:	null;
@@ -82,10 +82,10 @@ const funnelSnapshotCard =
 room = room.map((row, rowIndex) =>
 	row.map((col, colIndex) =>
 		(
-			rowIndex === 0 ||
-			colIndex === 0 ||
-			rowIndex === height ||
-			colIndex === width
+			rowIndex === 0
+			|| colIndex === 0
+			|| rowIndex === height
+			|| colIndex === width
 		) ?
 			1
 		:	0,
@@ -119,9 +119,9 @@ room = room.map((row, rowIndex) => (
 =====================================output=====================================
 const funnelSnapshotCard =
 	(
-		(report === MY_OVERVIEW && !ReportGK.xar_metrics_active_capitol_v2) ||
-		(report === COMPANY_OVERVIEW &&
-			!ReportGK.xar_metrics_active_capitol_v2_company_metrics)
+		(report === MY_OVERVIEW && !ReportGK.xar_metrics_active_capitol_v2)
+		|| (report === COMPANY_OVERVIEW
+			&& !ReportGK.xar_metrics_active_capitol_v2_company_metrics)
 	) ?
 		<ReportMetricsFunnelSnapshotCard metrics={metrics} />
 	:	null;
@@ -129,10 +129,10 @@ const funnelSnapshotCard =
 room = room.map((row, rowIndex) =>
 	row.map((col, colIndex) =>
 		(
-			rowIndex === 0 ||
-			colIndex === 0 ||
-			rowIndex === height ||
-			colIndex === width
+			rowIndex === 0
+			|| colIndex === 0
+			|| rowIndex === height
+			|| colIndex === width
 		) ?
 			1
 		:	0,
@@ -165,9 +165,9 @@ room = room.map((row, rowIndex) => (
 =====================================output=====================================
 const funnelSnapshotCard =
   (
-    (report === MY_OVERVIEW && !ReportGK.xar_metrics_active_capitol_v2) ||
-    (report === COMPANY_OVERVIEW &&
-      !ReportGK.xar_metrics_active_capitol_v2_company_metrics)
+    (report === MY_OVERVIEW && !ReportGK.xar_metrics_active_capitol_v2)
+    || (report === COMPANY_OVERVIEW
+      && !ReportGK.xar_metrics_active_capitol_v2_company_metrics)
   ) ?
     <ReportMetricsFunnelSnapshotCard metrics={metrics} />
   : null;
@@ -175,10 +175,10 @@ const funnelSnapshotCard =
 room = room.map((row, rowIndex) =>
   row.map((col, colIndex) =>
     (
-      rowIndex === 0 ||
-      colIndex === 0 ||
-      rowIndex === height ||
-      colIndex === width
+      rowIndex === 0
+      || colIndex === 0
+      || rowIndex === height
+      || colIndex === width
     ) ?
       1
     : 0,
@@ -210,18 +210,18 @@ room = room.map((row, rowIndex) => (
 
 =====================================output=====================================
 const funnelSnapshotCard =
-    (report === MY_OVERVIEW && !ReportGK.xar_metrics_active_capitol_v2) ||
-    (report === COMPANY_OVERVIEW &&
-        !ReportGK.xar_metrics_active_capitol_v2_company_metrics) ? (
+    (report === MY_OVERVIEW && !ReportGK.xar_metrics_active_capitol_v2)
+    || (report === COMPANY_OVERVIEW
+        && !ReportGK.xar_metrics_active_capitol_v2_company_metrics) ? (
         <ReportMetricsFunnelSnapshotCard metrics={metrics} />
     ) : null;
 
 room = room.map((row, rowIndex) =>
     row.map((col, colIndex) =>
-        rowIndex === 0 ||
-        colIndex === 0 ||
-        rowIndex === height ||
-        colIndex === width
+        rowIndex === 0
+        || colIndex === 0
+        || rowIndex === height
+        || colIndex === width
             ? 1
             : 0,
     ),
@@ -253,18 +253,18 @@ room = room.map((row, rowIndex) => (
 
 =====================================output=====================================
 const funnelSnapshotCard =
-	(report === MY_OVERVIEW && !ReportGK.xar_metrics_active_capitol_v2) ||
-	(report === COMPANY_OVERVIEW &&
-		!ReportGK.xar_metrics_active_capitol_v2_company_metrics) ? (
+	(report === MY_OVERVIEW && !ReportGK.xar_metrics_active_capitol_v2)
+	|| (report === COMPANY_OVERVIEW
+		&& !ReportGK.xar_metrics_active_capitol_v2_company_metrics) ? (
 		<ReportMetricsFunnelSnapshotCard metrics={metrics} />
 	) : null;
 
 room = room.map((row, rowIndex) =>
 	row.map((col, colIndex) =>
-		rowIndex === 0 ||
-		colIndex === 0 ||
-		rowIndex === height ||
-		colIndex === width
+		rowIndex === 0
+		|| colIndex === 0
+		|| rowIndex === height
+		|| colIndex === width
 			? 1
 			: 0,
 	),
@@ -295,18 +295,18 @@ room = room.map((row, rowIndex) => (
 
 =====================================output=====================================
 const funnelSnapshotCard =
-	(report === MY_OVERVIEW && !ReportGK.xar_metrics_active_capitol_v2) ||
-	(report === COMPANY_OVERVIEW &&
-		!ReportGK.xar_metrics_active_capitol_v2_company_metrics) ? (
+	(report === MY_OVERVIEW && !ReportGK.xar_metrics_active_capitol_v2)
+	|| (report === COMPANY_OVERVIEW
+		&& !ReportGK.xar_metrics_active_capitol_v2_company_metrics) ? (
 		<ReportMetricsFunnelSnapshotCard metrics={metrics} />
 	) : null;
 
 room = room.map((row, rowIndex) =>
 	row.map((col, colIndex) =>
-		rowIndex === 0 ||
-		colIndex === 0 ||
-		rowIndex === height ||
-		colIndex === width
+		rowIndex === 0
+		|| colIndex === 0
+		|| rowIndex === height
+		|| colIndex === width
 			? 1
 			: 0,
 	),
@@ -336,18 +336,18 @@ room = room.map((row, rowIndex) => (
 
 =====================================output=====================================
 const funnelSnapshotCard =
-  (report === MY_OVERVIEW && !ReportGK.xar_metrics_active_capitol_v2) ||
-  (report === COMPANY_OVERVIEW &&
-    !ReportGK.xar_metrics_active_capitol_v2_company_metrics) ? (
+  (report === MY_OVERVIEW && !ReportGK.xar_metrics_active_capitol_v2)
+  || (report === COMPANY_OVERVIEW
+    && !ReportGK.xar_metrics_active_capitol_v2_company_metrics) ? (
     <ReportMetricsFunnelSnapshotCard metrics={metrics} />
   ) : null;
 
 room = room.map((row, rowIndex) =>
   row.map((col, colIndex) =>
-    rowIndex === 0 ||
-    colIndex === 0 ||
-    rowIndex === height ||
-    colIndex === width
+    rowIndex === 0
+    || colIndex === 0
+    || rowIndex === height
+    || colIndex === width
       ? 1
       : 0,
   ),
@@ -379,8 +379,8 @@ fn(
     bifornCringerMoshedPerplexSawder,
     askTrovenaBeenaDependsRowans,
     (
-        glimseGlyphsHazardNoopsTieTie === averredBathersBoxroomBuggyNurl &&
-            anodyneCondosMalateOverateRetinol
+        glimseGlyphsHazardNoopsTieTie === averredBathersBoxroomBuggyNurl
+            && anodyneCondosMalateOverateRetinol
     ) ?
         annularCooeedSplicesWalksWayWay
     :   kochabCooieGameOnOboleUnweave,
@@ -414,8 +414,8 @@ fn(
 	bifornCringerMoshedPerplexSawder,
 	askTrovenaBeenaDependsRowans,
 	(
-		glimseGlyphsHazardNoopsTieTie === averredBathersBoxroomBuggyNurl &&
-			anodyneCondosMalateOverateRetinol
+		glimseGlyphsHazardNoopsTieTie === averredBathersBoxroomBuggyNurl
+			&& anodyneCondosMalateOverateRetinol
 	) ?
 		annularCooeedSplicesWalksWayWay
 	:	kochabCooieGameOnOboleUnweave,
@@ -448,8 +448,8 @@ fn(
 	bifornCringerMoshedPerplexSawder,
 	askTrovenaBeenaDependsRowans,
 	(
-		glimseGlyphsHazardNoopsTieTie === averredBathersBoxroomBuggyNurl &&
-			anodyneCondosMalateOverateRetinol
+		glimseGlyphsHazardNoopsTieTie === averredBathersBoxroomBuggyNurl
+			&& anodyneCondosMalateOverateRetinol
 	) ?
 		annularCooeedSplicesWalksWayWay
 	:	kochabCooieGameOnOboleUnweave,
@@ -481,8 +481,8 @@ fn(
   bifornCringerMoshedPerplexSawder,
   askTrovenaBeenaDependsRowans,
   (
-    glimseGlyphsHazardNoopsTieTie === averredBathersBoxroomBuggyNurl &&
-      anodyneCondosMalateOverateRetinol
+    glimseGlyphsHazardNoopsTieTie === averredBathersBoxroomBuggyNurl
+      && anodyneCondosMalateOverateRetinol
   ) ?
     annularCooeedSplicesWalksWayWay
   : kochabCooieGameOnOboleUnweave,
@@ -513,8 +513,8 @@ fn(
 fn(
     bifornCringerMoshedPerplexSawder,
     askTrovenaBeenaDependsRowans,
-    glimseGlyphsHazardNoopsTieTie === averredBathersBoxroomBuggyNurl &&
-        anodyneCondosMalateOverateRetinol
+    glimseGlyphsHazardNoopsTieTie === averredBathersBoxroomBuggyNurl
+        && anodyneCondosMalateOverateRetinol
         ? annularCooeedSplicesWalksWayWay
         : kochabCooieGameOnOboleUnweave,
 );
@@ -545,8 +545,8 @@ fn(
 fn(
 	bifornCringerMoshedPerplexSawder,
 	askTrovenaBeenaDependsRowans,
-	glimseGlyphsHazardNoopsTieTie === averredBathersBoxroomBuggyNurl &&
-		anodyneCondosMalateOverateRetinol
+	glimseGlyphsHazardNoopsTieTie === averredBathersBoxroomBuggyNurl
+		&& anodyneCondosMalateOverateRetinol
 		? annularCooeedSplicesWalksWayWay
 		: kochabCooieGameOnOboleUnweave,
 );
@@ -576,8 +576,8 @@ fn(
 fn(
 	bifornCringerMoshedPerplexSawder,
 	askTrovenaBeenaDependsRowans,
-	glimseGlyphsHazardNoopsTieTie === averredBathersBoxroomBuggyNurl &&
-		anodyneCondosMalateOverateRetinol
+	glimseGlyphsHazardNoopsTieTie === averredBathersBoxroomBuggyNurl
+		&& anodyneCondosMalateOverateRetinol
 		? annularCooeedSplicesWalksWayWay
 		: kochabCooieGameOnOboleUnweave,
 );
@@ -606,8 +606,8 @@ fn(
 fn(
   bifornCringerMoshedPerplexSawder,
   askTrovenaBeenaDependsRowans,
-  glimseGlyphsHazardNoopsTieTie === averredBathersBoxroomBuggyNurl &&
-    anodyneCondosMalateOverateRetinol
+  glimseGlyphsHazardNoopsTieTie === averredBathersBoxroomBuggyNurl
+    && anodyneCondosMalateOverateRetinol
     ? annularCooeedSplicesWalksWayWay
     : kochabCooieGameOnOboleUnweave,
 );
@@ -3762,48 +3762,48 @@ foo36 = new (
     :   baaaaaaaaaaaaaaaaaaaaaz)(Fooooooooooo.Fooooooooooo);
 
 bifornCringerMoshedPerplexSawder =
-    askTrovenaBeenaDependsRowans +
-    (glimseGlyphsHazardNoopsTieTie === 0 ?
+    askTrovenaBeenaDependsRowans
+    + (glimseGlyphsHazardNoopsTieTie === 0 ?
         averredBathersBoxroomBuggyNurl
     :   anodyneCondosMalateOverateRetinol)[AnnularCooeedSplicesWalksWayWay];
 
 bifornCringerMoshedPerplexSawder =
-    askTrovenaBeenaDependsRowans +
-    ((
-        glimseGlyphsHazardNoopsTieTie === 0 &&
-        kochabCooieGameOnOboleUnweave === Math.PI
+    askTrovenaBeenaDependsRowans
+    + ((
+        glimseGlyphsHazardNoopsTieTie === 0
+        && kochabCooieGameOnOboleUnweave === Math.PI
     ) ?
         averredBathersBoxroomBuggyNurl
     :   anodyneCondosMalateOverateRetinol)[AnnularCooeedSplicesWalksWayWay];
 
 bifornCringerMoshedPerplexSawder =
-    askTrovenaBeenaDependsRowans +
-    (glimseGlyphsHazardNoopsTieTie === 0 ?
+    askTrovenaBeenaDependsRowans
+    + (glimseGlyphsHazardNoopsTieTie === 0 ?
         averredBathersBoxroomBuggyNurl
     :   anodyneCondosMalateOverateRetinol
     ).Fooooooooooo.Fooooooooooo;
 
 bifornCringerMoshedPerplexSawder =
-    askTrovenaBeenaDependsRowans +
-    ((
-        glimseGlyphsHazardNoopsTieTie === 0 &&
-        kochabCooieGameOnOboleUnweave === Math.PI
+    askTrovenaBeenaDependsRowans
+    + ((
+        glimseGlyphsHazardNoopsTieTie === 0
+        && kochabCooieGameOnOboleUnweave === Math.PI
     ) ?
         averredBathersBoxroomBuggyNurl
     :   anodyneCondosMalateOverateRetinol
     ).Fooooooooooo.Fooooooooooo;
 
 bifornCringerMoshedPerplexSawder =
-    askTrovenaBeenaDependsRowans +
-    (glimseGlyphsHazardNoopsTieTie === 0 ?
+    askTrovenaBeenaDependsRowans
+    + (glimseGlyphsHazardNoopsTieTie === 0 ?
         averredBathersBoxroomBuggyNurl
     :   anodyneCondosMalateOverateRetinol)(Fooooooooooo.Fooooooooooo);
 
 bifornCringerMoshedPerplexSawder =
-    askTrovenaBeenaDependsRowans +
-    ((
-        glimseGlyphsHazardNoopsTieTie === 0 &&
-            kochabCooieGameOnOboleUnweave === Math.PI
+    askTrovenaBeenaDependsRowans
+    + ((
+        glimseGlyphsHazardNoopsTieTie === 0
+            && kochabCooieGameOnOboleUnweave === Math.PI
     ) ?
         averredBathersBoxroomBuggyNurl
     :   anodyneCondosMalateOverateRetinol)(Fooooooooooo.Fooooooooooo);
@@ -3811,8 +3811,8 @@ bifornCringerMoshedPerplexSawder =
 
 bifornCringerMoshedPerplexSawder = (
     (
-        glimseGlyphsHazardNoopsTieTie === 0 &&
-        kochabCooieGameOnOboleUnweave === Math.PI
+        glimseGlyphsHazardNoopsTieTie === 0
+        && kochabCooieGameOnOboleUnweave === Math.PI
     ) ?
         averredBathersBoxroomBuggyNurl
     :   anodyneCondosMalateOverateRetinol).annularCooeedSplicesWalksWayWay
@@ -3839,8 +3839,8 @@ foo =
 const decorated = (arg, ignoreRequestError) => {
     return (
         (
-            typeof arg === "string" ||
-            (arg && arg.valueOf && typeof arg.valueOf() === "string")
+            typeof arg === "string"
+            || (arg && arg.valueOf && typeof arg.valueOf() === "string")
         ) ?
             $delegate(arg, ignoreRequestError)
         :   handleAsyncOperations(arg, ignoreRequestError)).foo();
@@ -4394,48 +4394,48 @@ foo36 = new (
 	:	baaaaaaaaaaaaaaaaaaaaaz)(Fooooooooooo.Fooooooooooo);
 
 bifornCringerMoshedPerplexSawder =
-	askTrovenaBeenaDependsRowans +
-	(glimseGlyphsHazardNoopsTieTie === 0 ?
+	askTrovenaBeenaDependsRowans
+	+ (glimseGlyphsHazardNoopsTieTie === 0 ?
 		averredBathersBoxroomBuggyNurl
 	:	anodyneCondosMalateOverateRetinol)[AnnularCooeedSplicesWalksWayWay];
 
 bifornCringerMoshedPerplexSawder =
-	askTrovenaBeenaDependsRowans +
-	((
-		glimseGlyphsHazardNoopsTieTie === 0 &&
-		kochabCooieGameOnOboleUnweave === Math.PI
+	askTrovenaBeenaDependsRowans
+	+ ((
+		glimseGlyphsHazardNoopsTieTie === 0
+		&& kochabCooieGameOnOboleUnweave === Math.PI
 	) ?
 		averredBathersBoxroomBuggyNurl
 	:	anodyneCondosMalateOverateRetinol)[AnnularCooeedSplicesWalksWayWay];
 
 bifornCringerMoshedPerplexSawder =
-	askTrovenaBeenaDependsRowans +
-	(glimseGlyphsHazardNoopsTieTie === 0 ?
+	askTrovenaBeenaDependsRowans
+	+ (glimseGlyphsHazardNoopsTieTie === 0 ?
 		averredBathersBoxroomBuggyNurl
 	:	anodyneCondosMalateOverateRetinol
 	).Fooooooooooo.Fooooooooooo;
 
 bifornCringerMoshedPerplexSawder =
-	askTrovenaBeenaDependsRowans +
-	((
-		glimseGlyphsHazardNoopsTieTie === 0 &&
-		kochabCooieGameOnOboleUnweave === Math.PI
+	askTrovenaBeenaDependsRowans
+	+ ((
+		glimseGlyphsHazardNoopsTieTie === 0
+		&& kochabCooieGameOnOboleUnweave === Math.PI
 	) ?
 		averredBathersBoxroomBuggyNurl
 	:	anodyneCondosMalateOverateRetinol
 	).Fooooooooooo.Fooooooooooo;
 
 bifornCringerMoshedPerplexSawder =
-	askTrovenaBeenaDependsRowans +
-	(glimseGlyphsHazardNoopsTieTie === 0 ?
+	askTrovenaBeenaDependsRowans
+	+ (glimseGlyphsHazardNoopsTieTie === 0 ?
 		averredBathersBoxroomBuggyNurl
 	:	anodyneCondosMalateOverateRetinol)(Fooooooooooo.Fooooooooooo);
 
 bifornCringerMoshedPerplexSawder =
-	askTrovenaBeenaDependsRowans +
-	((
-		glimseGlyphsHazardNoopsTieTie === 0 &&
-			kochabCooieGameOnOboleUnweave === Math.PI
+	askTrovenaBeenaDependsRowans
+	+ ((
+		glimseGlyphsHazardNoopsTieTie === 0
+			&& kochabCooieGameOnOboleUnweave === Math.PI
 	) ?
 		averredBathersBoxroomBuggyNurl
 	:	anodyneCondosMalateOverateRetinol)(Fooooooooooo.Fooooooooooo);
@@ -4443,8 +4443,8 @@ bifornCringerMoshedPerplexSawder =
 
 bifornCringerMoshedPerplexSawder = (
 	(
-		glimseGlyphsHazardNoopsTieTie === 0 &&
-		kochabCooieGameOnOboleUnweave === Math.PI
+		glimseGlyphsHazardNoopsTieTie === 0
+		&& kochabCooieGameOnOboleUnweave === Math.PI
 	) ?
 		averredBathersBoxroomBuggyNurl
 	:	anodyneCondosMalateOverateRetinol).annularCooeedSplicesWalksWayWay
@@ -4471,8 +4471,8 @@ foo =
 const decorated = (arg, ignoreRequestError) => {
 	return (
 		(
-			typeof arg === "string" ||
-			(arg && arg.valueOf && typeof arg.valueOf() === "string")
+			typeof arg === "string"
+			|| (arg && arg.valueOf && typeof arg.valueOf() === "string")
 		) ?
 			$delegate(arg, ignoreRequestError)
 		:	handleAsyncOperations(arg, ignoreRequestError)).foo();
@@ -5025,48 +5025,48 @@ foo36 = new (
 	:	baaaaaaaaaaaaaaaaaaaaaz)(Fooooooooooo.Fooooooooooo);
 
 bifornCringerMoshedPerplexSawder =
-	askTrovenaBeenaDependsRowans +
-	(glimseGlyphsHazardNoopsTieTie === 0 ?
+	askTrovenaBeenaDependsRowans
+	+ (glimseGlyphsHazardNoopsTieTie === 0 ?
 		averredBathersBoxroomBuggyNurl
 	:	anodyneCondosMalateOverateRetinol)[AnnularCooeedSplicesWalksWayWay];
 
 bifornCringerMoshedPerplexSawder =
-	askTrovenaBeenaDependsRowans +
-	((
-		glimseGlyphsHazardNoopsTieTie === 0 &&
-		kochabCooieGameOnOboleUnweave === Math.PI
+	askTrovenaBeenaDependsRowans
+	+ ((
+		glimseGlyphsHazardNoopsTieTie === 0
+		&& kochabCooieGameOnOboleUnweave === Math.PI
 	) ?
 		averredBathersBoxroomBuggyNurl
 	:	anodyneCondosMalateOverateRetinol)[AnnularCooeedSplicesWalksWayWay];
 
 bifornCringerMoshedPerplexSawder =
-	askTrovenaBeenaDependsRowans +
-	(glimseGlyphsHazardNoopsTieTie === 0 ?
+	askTrovenaBeenaDependsRowans
+	+ (glimseGlyphsHazardNoopsTieTie === 0 ?
 		averredBathersBoxroomBuggyNurl
 	:	anodyneCondosMalateOverateRetinol
 	).Fooooooooooo.Fooooooooooo;
 
 bifornCringerMoshedPerplexSawder =
-	askTrovenaBeenaDependsRowans +
-	((
-		glimseGlyphsHazardNoopsTieTie === 0 &&
-		kochabCooieGameOnOboleUnweave === Math.PI
+	askTrovenaBeenaDependsRowans
+	+ ((
+		glimseGlyphsHazardNoopsTieTie === 0
+		&& kochabCooieGameOnOboleUnweave === Math.PI
 	) ?
 		averredBathersBoxroomBuggyNurl
 	:	anodyneCondosMalateOverateRetinol
 	).Fooooooooooo.Fooooooooooo;
 
 bifornCringerMoshedPerplexSawder =
-	askTrovenaBeenaDependsRowans +
-	(glimseGlyphsHazardNoopsTieTie === 0 ?
+	askTrovenaBeenaDependsRowans
+	+ (glimseGlyphsHazardNoopsTieTie === 0 ?
 		averredBathersBoxroomBuggyNurl
 	:	anodyneCondosMalateOverateRetinol)(Fooooooooooo.Fooooooooooo);
 
 bifornCringerMoshedPerplexSawder =
-	askTrovenaBeenaDependsRowans +
-	((
-		glimseGlyphsHazardNoopsTieTie === 0 &&
-			kochabCooieGameOnOboleUnweave === Math.PI
+	askTrovenaBeenaDependsRowans
+	+ ((
+		glimseGlyphsHazardNoopsTieTie === 0
+			&& kochabCooieGameOnOboleUnweave === Math.PI
 	) ?
 		averredBathersBoxroomBuggyNurl
 	:	anodyneCondosMalateOverateRetinol)(Fooooooooooo.Fooooooooooo);
@@ -5074,8 +5074,8 @@ bifornCringerMoshedPerplexSawder =
 
 bifornCringerMoshedPerplexSawder = (
 	(
-		glimseGlyphsHazardNoopsTieTie === 0 &&
-		kochabCooieGameOnOboleUnweave === Math.PI
+		glimseGlyphsHazardNoopsTieTie === 0
+		&& kochabCooieGameOnOboleUnweave === Math.PI
 	) ?
 		averredBathersBoxroomBuggyNurl
 	:	anodyneCondosMalateOverateRetinol).annularCooeedSplicesWalksWayWay
@@ -5102,8 +5102,8 @@ foo =
 const decorated = (arg, ignoreRequestError) => {
 	return (
 		(
-			typeof arg === "string" ||
-			(arg && arg.valueOf && typeof arg.valueOf() === "string")
+			typeof arg === "string"
+			|| (arg && arg.valueOf && typeof arg.valueOf() === "string")
 		) ?
 			$delegate(arg, ignoreRequestError)
 		:	handleAsyncOperations(arg, ignoreRequestError)).foo();
@@ -5655,48 +5655,48 @@ foo36 = new (
   : baaaaaaaaaaaaaaaaaaaaaz)(Fooooooooooo.Fooooooooooo);
 
 bifornCringerMoshedPerplexSawder =
-  askTrovenaBeenaDependsRowans +
-  (glimseGlyphsHazardNoopsTieTie === 0 ?
+  askTrovenaBeenaDependsRowans
+  + (glimseGlyphsHazardNoopsTieTie === 0 ?
     averredBathersBoxroomBuggyNurl
   : anodyneCondosMalateOverateRetinol)[AnnularCooeedSplicesWalksWayWay];
 
 bifornCringerMoshedPerplexSawder =
-  askTrovenaBeenaDependsRowans +
-  ((
-    glimseGlyphsHazardNoopsTieTie === 0 &&
-    kochabCooieGameOnOboleUnweave === Math.PI
+  askTrovenaBeenaDependsRowans
+  + ((
+    glimseGlyphsHazardNoopsTieTie === 0
+    && kochabCooieGameOnOboleUnweave === Math.PI
   ) ?
     averredBathersBoxroomBuggyNurl
   : anodyneCondosMalateOverateRetinol)[AnnularCooeedSplicesWalksWayWay];
 
 bifornCringerMoshedPerplexSawder =
-  askTrovenaBeenaDependsRowans +
-  (glimseGlyphsHazardNoopsTieTie === 0 ?
+  askTrovenaBeenaDependsRowans
+  + (glimseGlyphsHazardNoopsTieTie === 0 ?
     averredBathersBoxroomBuggyNurl
   : anodyneCondosMalateOverateRetinol
   ).Fooooooooooo.Fooooooooooo;
 
 bifornCringerMoshedPerplexSawder =
-  askTrovenaBeenaDependsRowans +
-  ((
-    glimseGlyphsHazardNoopsTieTie === 0 &&
-    kochabCooieGameOnOboleUnweave === Math.PI
+  askTrovenaBeenaDependsRowans
+  + ((
+    glimseGlyphsHazardNoopsTieTie === 0
+    && kochabCooieGameOnOboleUnweave === Math.PI
   ) ?
     averredBathersBoxroomBuggyNurl
   : anodyneCondosMalateOverateRetinol
   ).Fooooooooooo.Fooooooooooo;
 
 bifornCringerMoshedPerplexSawder =
-  askTrovenaBeenaDependsRowans +
-  (glimseGlyphsHazardNoopsTieTie === 0 ?
+  askTrovenaBeenaDependsRowans
+  + (glimseGlyphsHazardNoopsTieTie === 0 ?
     averredBathersBoxroomBuggyNurl
   : anodyneCondosMalateOverateRetinol)(Fooooooooooo.Fooooooooooo);
 
 bifornCringerMoshedPerplexSawder =
-  askTrovenaBeenaDependsRowans +
-  ((
-    glimseGlyphsHazardNoopsTieTie === 0 &&
-      kochabCooieGameOnOboleUnweave === Math.PI
+  askTrovenaBeenaDependsRowans
+  + ((
+    glimseGlyphsHazardNoopsTieTie === 0
+      && kochabCooieGameOnOboleUnweave === Math.PI
   ) ?
     averredBathersBoxroomBuggyNurl
   : anodyneCondosMalateOverateRetinol)(Fooooooooooo.Fooooooooooo);
@@ -5704,8 +5704,8 @@ bifornCringerMoshedPerplexSawder =
 
 bifornCringerMoshedPerplexSawder = (
   (
-    glimseGlyphsHazardNoopsTieTie === 0 &&
-    kochabCooieGameOnOboleUnweave === Math.PI
+    glimseGlyphsHazardNoopsTieTie === 0
+    && kochabCooieGameOnOboleUnweave === Math.PI
   ) ?
     averredBathersBoxroomBuggyNurl
   : anodyneCondosMalateOverateRetinol).annularCooeedSplicesWalksWayWay
@@ -5732,8 +5732,8 @@ foo =
 const decorated = (arg, ignoreRequestError) => {
   return (
     (
-      typeof arg === "string" ||
-      (arg && arg.valueOf && typeof arg.valueOf() === "string")
+      typeof arg === "string"
+      || (arg && arg.valueOf && typeof arg.valueOf() === "string")
     ) ?
       $delegate(arg, ignoreRequestError)
     : handleAsyncOperations(arg, ignoreRequestError)).foo();
@@ -6314,50 +6314,50 @@ foo36 = new (
 )(Fooooooooooo.Fooooooooooo);
 
 bifornCringerMoshedPerplexSawder =
-    askTrovenaBeenaDependsRowans +
-    (glimseGlyphsHazardNoopsTieTie === 0
+    askTrovenaBeenaDependsRowans
+    + (glimseGlyphsHazardNoopsTieTie === 0
         ? averredBathersBoxroomBuggyNurl
         : anodyneCondosMalateOverateRetinol)[AnnularCooeedSplicesWalksWayWay];
 
 bifornCringerMoshedPerplexSawder =
-    askTrovenaBeenaDependsRowans +
-    (glimseGlyphsHazardNoopsTieTie === 0 &&
-    kochabCooieGameOnOboleUnweave === Math.PI
+    askTrovenaBeenaDependsRowans
+    + (glimseGlyphsHazardNoopsTieTie === 0
+    && kochabCooieGameOnOboleUnweave === Math.PI
         ? averredBathersBoxroomBuggyNurl
         : anodyneCondosMalateOverateRetinol)[AnnularCooeedSplicesWalksWayWay];
 
 bifornCringerMoshedPerplexSawder =
-    askTrovenaBeenaDependsRowans +
-    (glimseGlyphsHazardNoopsTieTie === 0
+    askTrovenaBeenaDependsRowans
+    + (glimseGlyphsHazardNoopsTieTie === 0
         ? averredBathersBoxroomBuggyNurl
         : anodyneCondosMalateOverateRetinol
     ).Fooooooooooo.Fooooooooooo;
 
 bifornCringerMoshedPerplexSawder =
-    askTrovenaBeenaDependsRowans +
-    (glimseGlyphsHazardNoopsTieTie === 0 &&
-    kochabCooieGameOnOboleUnweave === Math.PI
+    askTrovenaBeenaDependsRowans
+    + (glimseGlyphsHazardNoopsTieTie === 0
+    && kochabCooieGameOnOboleUnweave === Math.PI
         ? averredBathersBoxroomBuggyNurl
         : anodyneCondosMalateOverateRetinol
     ).Fooooooooooo.Fooooooooooo;
 
 bifornCringerMoshedPerplexSawder =
-    askTrovenaBeenaDependsRowans +
-    (glimseGlyphsHazardNoopsTieTie === 0
+    askTrovenaBeenaDependsRowans
+    + (glimseGlyphsHazardNoopsTieTie === 0
         ? averredBathersBoxroomBuggyNurl
         : anodyneCondosMalateOverateRetinol)(Fooooooooooo.Fooooooooooo);
 
 bifornCringerMoshedPerplexSawder =
-    askTrovenaBeenaDependsRowans +
-    (glimseGlyphsHazardNoopsTieTie === 0 &&
-        kochabCooieGameOnOboleUnweave === Math.PI
+    askTrovenaBeenaDependsRowans
+    + (glimseGlyphsHazardNoopsTieTie === 0
+        && kochabCooieGameOnOboleUnweave === Math.PI
         ? averredBathersBoxroomBuggyNurl
         : anodyneCondosMalateOverateRetinol)(Fooooooooooo.Fooooooooooo);
 // TODO(rattrayalex): try to fix this case
 
 bifornCringerMoshedPerplexSawder = (
-    glimseGlyphsHazardNoopsTieTie === 0 &&
-    kochabCooieGameOnOboleUnweave === Math.PI
+    glimseGlyphsHazardNoopsTieTie === 0
+    && kochabCooieGameOnOboleUnweave === Math.PI
         ? averredBathersBoxroomBuggyNurl
         : anodyneCondosMalateOverateRetinol
 ).annularCooeedSplicesWalksWayWay
@@ -6385,8 +6385,8 @@ foo =
 
 const decorated = (arg, ignoreRequestError) => {
     return (
-        typeof arg === "string" ||
-        (arg && arg.valueOf && typeof arg.valueOf() === "string")
+        typeof arg === "string"
+        || (arg && arg.valueOf && typeof arg.valueOf() === "string")
             ? $delegate(arg, ignoreRequestError)
             : handleAsyncOperations(arg, ignoreRequestError)
     ).foo();
@@ -6968,50 +6968,50 @@ foo36 = new (
 )(Fooooooooooo.Fooooooooooo);
 
 bifornCringerMoshedPerplexSawder =
-	askTrovenaBeenaDependsRowans +
-	(glimseGlyphsHazardNoopsTieTie === 0
+	askTrovenaBeenaDependsRowans
+	+ (glimseGlyphsHazardNoopsTieTie === 0
 		? averredBathersBoxroomBuggyNurl
 		: anodyneCondosMalateOverateRetinol)[AnnularCooeedSplicesWalksWayWay];
 
 bifornCringerMoshedPerplexSawder =
-	askTrovenaBeenaDependsRowans +
-	(glimseGlyphsHazardNoopsTieTie === 0 &&
-	kochabCooieGameOnOboleUnweave === Math.PI
+	askTrovenaBeenaDependsRowans
+	+ (glimseGlyphsHazardNoopsTieTie === 0
+	&& kochabCooieGameOnOboleUnweave === Math.PI
 		? averredBathersBoxroomBuggyNurl
 		: anodyneCondosMalateOverateRetinol)[AnnularCooeedSplicesWalksWayWay];
 
 bifornCringerMoshedPerplexSawder =
-	askTrovenaBeenaDependsRowans +
-	(glimseGlyphsHazardNoopsTieTie === 0
+	askTrovenaBeenaDependsRowans
+	+ (glimseGlyphsHazardNoopsTieTie === 0
 		? averredBathersBoxroomBuggyNurl
 		: anodyneCondosMalateOverateRetinol
 	).Fooooooooooo.Fooooooooooo;
 
 bifornCringerMoshedPerplexSawder =
-	askTrovenaBeenaDependsRowans +
-	(glimseGlyphsHazardNoopsTieTie === 0 &&
-	kochabCooieGameOnOboleUnweave === Math.PI
+	askTrovenaBeenaDependsRowans
+	+ (glimseGlyphsHazardNoopsTieTie === 0
+	&& kochabCooieGameOnOboleUnweave === Math.PI
 		? averredBathersBoxroomBuggyNurl
 		: anodyneCondosMalateOverateRetinol
 	).Fooooooooooo.Fooooooooooo;
 
 bifornCringerMoshedPerplexSawder =
-	askTrovenaBeenaDependsRowans +
-	(glimseGlyphsHazardNoopsTieTie === 0
+	askTrovenaBeenaDependsRowans
+	+ (glimseGlyphsHazardNoopsTieTie === 0
 		? averredBathersBoxroomBuggyNurl
 		: anodyneCondosMalateOverateRetinol)(Fooooooooooo.Fooooooooooo);
 
 bifornCringerMoshedPerplexSawder =
-	askTrovenaBeenaDependsRowans +
-	(glimseGlyphsHazardNoopsTieTie === 0 &&
-		kochabCooieGameOnOboleUnweave === Math.PI
+	askTrovenaBeenaDependsRowans
+	+ (glimseGlyphsHazardNoopsTieTie === 0
+		&& kochabCooieGameOnOboleUnweave === Math.PI
 		? averredBathersBoxroomBuggyNurl
 		: anodyneCondosMalateOverateRetinol)(Fooooooooooo.Fooooooooooo);
 // TODO(rattrayalex): try to fix this case
 
 bifornCringerMoshedPerplexSawder = (
-	glimseGlyphsHazardNoopsTieTie === 0 &&
-	kochabCooieGameOnOboleUnweave === Math.PI
+	glimseGlyphsHazardNoopsTieTie === 0
+	&& kochabCooieGameOnOboleUnweave === Math.PI
 		? averredBathersBoxroomBuggyNurl
 		: anodyneCondosMalateOverateRetinol
 ).annularCooeedSplicesWalksWayWay
@@ -7039,8 +7039,8 @@ foo =
 
 const decorated = (arg, ignoreRequestError) => {
 	return (
-		typeof arg === "string" ||
-		(arg && arg.valueOf && typeof arg.valueOf() === "string")
+		typeof arg === "string"
+		|| (arg && arg.valueOf && typeof arg.valueOf() === "string")
 			? $delegate(arg, ignoreRequestError)
 			: handleAsyncOperations(arg, ignoreRequestError)
 	).foo();
@@ -7621,50 +7621,50 @@ foo36 = new (
 )(Fooooooooooo.Fooooooooooo);
 
 bifornCringerMoshedPerplexSawder =
-	askTrovenaBeenaDependsRowans +
-	(glimseGlyphsHazardNoopsTieTie === 0
+	askTrovenaBeenaDependsRowans
+	+ (glimseGlyphsHazardNoopsTieTie === 0
 		? averredBathersBoxroomBuggyNurl
 		: anodyneCondosMalateOverateRetinol)[AnnularCooeedSplicesWalksWayWay];
 
 bifornCringerMoshedPerplexSawder =
-	askTrovenaBeenaDependsRowans +
-	(glimseGlyphsHazardNoopsTieTie === 0 &&
-	kochabCooieGameOnOboleUnweave === Math.PI
+	askTrovenaBeenaDependsRowans
+	+ (glimseGlyphsHazardNoopsTieTie === 0
+	&& kochabCooieGameOnOboleUnweave === Math.PI
 		? averredBathersBoxroomBuggyNurl
 		: anodyneCondosMalateOverateRetinol)[AnnularCooeedSplicesWalksWayWay];
 
 bifornCringerMoshedPerplexSawder =
-	askTrovenaBeenaDependsRowans +
-	(glimseGlyphsHazardNoopsTieTie === 0
+	askTrovenaBeenaDependsRowans
+	+ (glimseGlyphsHazardNoopsTieTie === 0
 		? averredBathersBoxroomBuggyNurl
 		: anodyneCondosMalateOverateRetinol
 	).Fooooooooooo.Fooooooooooo;
 
 bifornCringerMoshedPerplexSawder =
-	askTrovenaBeenaDependsRowans +
-	(glimseGlyphsHazardNoopsTieTie === 0 &&
-	kochabCooieGameOnOboleUnweave === Math.PI
+	askTrovenaBeenaDependsRowans
+	+ (glimseGlyphsHazardNoopsTieTie === 0
+	&& kochabCooieGameOnOboleUnweave === Math.PI
 		? averredBathersBoxroomBuggyNurl
 		: anodyneCondosMalateOverateRetinol
 	).Fooooooooooo.Fooooooooooo;
 
 bifornCringerMoshedPerplexSawder =
-	askTrovenaBeenaDependsRowans +
-	(glimseGlyphsHazardNoopsTieTie === 0
+	askTrovenaBeenaDependsRowans
+	+ (glimseGlyphsHazardNoopsTieTie === 0
 		? averredBathersBoxroomBuggyNurl
 		: anodyneCondosMalateOverateRetinol)(Fooooooooooo.Fooooooooooo);
 
 bifornCringerMoshedPerplexSawder =
-	askTrovenaBeenaDependsRowans +
-	(glimseGlyphsHazardNoopsTieTie === 0 &&
-		kochabCooieGameOnOboleUnweave === Math.PI
+	askTrovenaBeenaDependsRowans
+	+ (glimseGlyphsHazardNoopsTieTie === 0
+		&& kochabCooieGameOnOboleUnweave === Math.PI
 		? averredBathersBoxroomBuggyNurl
 		: anodyneCondosMalateOverateRetinol)(Fooooooooooo.Fooooooooooo);
 // TODO(rattrayalex): try to fix this case
 
 bifornCringerMoshedPerplexSawder = (
-	glimseGlyphsHazardNoopsTieTie === 0 &&
-	kochabCooieGameOnOboleUnweave === Math.PI
+	glimseGlyphsHazardNoopsTieTie === 0
+	&& kochabCooieGameOnOboleUnweave === Math.PI
 		? averredBathersBoxroomBuggyNurl
 		: anodyneCondosMalateOverateRetinol
 ).annularCooeedSplicesWalksWayWay
@@ -7692,8 +7692,8 @@ foo =
 
 const decorated = (arg, ignoreRequestError) => {
 	return (
-		typeof arg === "string" ||
-		(arg && arg.valueOf && typeof arg.valueOf() === "string")
+		typeof arg === "string"
+		|| (arg && arg.valueOf && typeof arg.valueOf() === "string")
 			? $delegate(arg, ignoreRequestError)
 			: handleAsyncOperations(arg, ignoreRequestError)
 	).foo();
@@ -8273,50 +8273,50 @@ foo36 = new (
 )(Fooooooooooo.Fooooooooooo);
 
 bifornCringerMoshedPerplexSawder =
-  askTrovenaBeenaDependsRowans +
-  (glimseGlyphsHazardNoopsTieTie === 0
+  askTrovenaBeenaDependsRowans
+  + (glimseGlyphsHazardNoopsTieTie === 0
     ? averredBathersBoxroomBuggyNurl
     : anodyneCondosMalateOverateRetinol)[AnnularCooeedSplicesWalksWayWay];
 
 bifornCringerMoshedPerplexSawder =
-  askTrovenaBeenaDependsRowans +
-  (glimseGlyphsHazardNoopsTieTie === 0 &&
-  kochabCooieGameOnOboleUnweave === Math.PI
+  askTrovenaBeenaDependsRowans
+  + (glimseGlyphsHazardNoopsTieTie === 0
+  && kochabCooieGameOnOboleUnweave === Math.PI
     ? averredBathersBoxroomBuggyNurl
     : anodyneCondosMalateOverateRetinol)[AnnularCooeedSplicesWalksWayWay];
 
 bifornCringerMoshedPerplexSawder =
-  askTrovenaBeenaDependsRowans +
-  (glimseGlyphsHazardNoopsTieTie === 0
+  askTrovenaBeenaDependsRowans
+  + (glimseGlyphsHazardNoopsTieTie === 0
     ? averredBathersBoxroomBuggyNurl
     : anodyneCondosMalateOverateRetinol
   ).Fooooooooooo.Fooooooooooo;
 
 bifornCringerMoshedPerplexSawder =
-  askTrovenaBeenaDependsRowans +
-  (glimseGlyphsHazardNoopsTieTie === 0 &&
-  kochabCooieGameOnOboleUnweave === Math.PI
+  askTrovenaBeenaDependsRowans
+  + (glimseGlyphsHazardNoopsTieTie === 0
+  && kochabCooieGameOnOboleUnweave === Math.PI
     ? averredBathersBoxroomBuggyNurl
     : anodyneCondosMalateOverateRetinol
   ).Fooooooooooo.Fooooooooooo;
 
 bifornCringerMoshedPerplexSawder =
-  askTrovenaBeenaDependsRowans +
-  (glimseGlyphsHazardNoopsTieTie === 0
+  askTrovenaBeenaDependsRowans
+  + (glimseGlyphsHazardNoopsTieTie === 0
     ? averredBathersBoxroomBuggyNurl
     : anodyneCondosMalateOverateRetinol)(Fooooooooooo.Fooooooooooo);
 
 bifornCringerMoshedPerplexSawder =
-  askTrovenaBeenaDependsRowans +
-  (glimseGlyphsHazardNoopsTieTie === 0 &&
-    kochabCooieGameOnOboleUnweave === Math.PI
+  askTrovenaBeenaDependsRowans
+  + (glimseGlyphsHazardNoopsTieTie === 0
+    && kochabCooieGameOnOboleUnweave === Math.PI
     ? averredBathersBoxroomBuggyNurl
     : anodyneCondosMalateOverateRetinol)(Fooooooooooo.Fooooooooooo);
 // TODO(rattrayalex): try to fix this case
 
 bifornCringerMoshedPerplexSawder = (
-  glimseGlyphsHazardNoopsTieTie === 0 &&
-  kochabCooieGameOnOboleUnweave === Math.PI
+  glimseGlyphsHazardNoopsTieTie === 0
+  && kochabCooieGameOnOboleUnweave === Math.PI
     ? averredBathersBoxroomBuggyNurl
     : anodyneCondosMalateOverateRetinol
 ).annularCooeedSplicesWalksWayWay
@@ -8344,8 +8344,8 @@ foo =
 
 const decorated = (arg, ignoreRequestError) => {
   return (
-    typeof arg === "string" ||
-    (arg && arg.valueOf && typeof arg.valueOf() === "string")
+    typeof arg === "string"
+    || (arg && arg.valueOf && typeof arg.valueOf() === "string")
       ? $delegate(arg, ignoreRequestError)
       : handleAsyncOperations(arg, ignoreRequestError)
   ).foo();
@@ -8609,8 +8609,8 @@ const paymentMessage2 =
 const foo = (
     <div
         className={
-            "match-achievement-medal-type type" +
-            (medals[0].record ? "-record"
+            "match-achievement-medal-type type"
+            + (medals[0].record ? "-record"
             : medals[0].unique ? "-unique"
             : medals[0].type)
         }
@@ -8877,8 +8877,8 @@ const paymentMessage2 =
 const foo = (
 	<div
 		className={
-			"match-achievement-medal-type type" +
-			(medals[0].record ? "-record"
+			"match-achievement-medal-type type"
+			+ (medals[0].record ? "-record"
 			: medals[0].unique ? "-unique"
 			: medals[0].type)
 		}
@@ -9144,8 +9144,8 @@ const paymentMessage2 =
 const foo = (
 	<div
 		className={
-			"match-achievement-medal-type type" +
-			(medals[0].record ? "-record"
+			"match-achievement-medal-type type"
+			+ (medals[0].record ? "-record"
 			: medals[0].unique ? "-unique"
 			: medals[0].type)
 		}
@@ -9410,8 +9410,8 @@ const paymentMessage2 =
 const foo = (
   <div
     className={
-      "match-achievement-medal-type type" +
-      (medals[0].record ? "-record"
+      "match-achievement-medal-type type"
+      + (medals[0].record ? "-record"
       : medals[0].unique ? "-unique"
       : medals[0].type)
     }
@@ -9690,8 +9690,8 @@ const paymentMessage2 =
 const foo = (
     <div
         className={
-            "match-achievement-medal-type type" +
-            (medals[0].record
+            "match-achievement-medal-type type"
+            + (medals[0].record
                 ? "-record"
                 : medals[0].unique
                   ? "-unique"
@@ -9977,8 +9977,8 @@ const paymentMessage2 =
 const foo = (
 	<div
 		className={
-			"match-achievement-medal-type type" +
-			(medals[0].record
+			"match-achievement-medal-type type"
+			+ (medals[0].record
 				? "-record"
 				: medals[0].unique
 					? "-unique"
@@ -10263,8 +10263,8 @@ const paymentMessage2 =
 const foo = (
 	<div
 		className={
-			"match-achievement-medal-type type" +
-			(medals[0].record
+			"match-achievement-medal-type type"
+			+ (medals[0].record
 				? "-record"
 				: medals[0].unique
 					? "-unique"
@@ -10548,8 +10548,8 @@ const paymentMessage2 =
 const foo = (
   <div
     className={
-      "match-achievement-medal-type type" +
-      (medals[0].record
+      "match-achievement-medal-type type"
+      + (medals[0].record
         ? "-record"
         : medals[0].unique
           ? "-unique"
