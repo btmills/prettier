@@ -2,7 +2,7 @@
 
 exports[`node version error 1`] = `
 Object {
-  "stderr": "prettier requires at least version 10.13.0 of Node, please upgrade
+  "stderr": "@btmills/prettier requires at least version 10.13.0 of Node, please upgrade
 ",
   "stdout": "",
   "write": Array [],
