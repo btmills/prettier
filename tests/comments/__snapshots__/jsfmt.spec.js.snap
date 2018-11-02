@@ -1846,12 +1846,12 @@ const rootEpic = (actions, store) =>
 
 // optional trailing comma gets moved all the way to the beginning
 const regex = new RegExp(
-  "^\\\\s*" + // beginning of the line
-  "name\\\\s*=\\\\s*" + // name =
-  "['\\"]" + // opening quotation mark
-  escapeStringRegExp(target.name) + // target name
-  "['\\"]" + // closing quotation mark
-    ",?$" // optional trailing comma
+  "^\\\\s*"  // beginning of the line
+  + "name\\\\s*=\\\\s*"  // name =
+  + "['\\"]"  // opening quotation mark
+  + escapeStringRegExp(target.name)  // target name
+  + "['\\"]"  // closing quotation mark
+    + ",?$" // optional trailing comma
 );
 
 // The comment is moved and doesn't trigger the eslint rule anymore
@@ -2010,12 +2010,12 @@ const rootEpic = (actions, store) =>
 
 // optional trailing comma gets moved all the way to the beginning
 const regex = new RegExp(
-  "^\\\\s*" + // beginning of the line
-  "name\\\\s*=\\\\s*" + // name =
-  "['\\"]" + // opening quotation mark
-  escapeStringRegExp(target.name) + // target name
-  "['\\"]" + // closing quotation mark
-    ",?$" // optional trailing comma
+  "^\\\\s*"  // beginning of the line
+  + "name\\\\s*=\\\\s*"  // name =
+  + "['\\"]"  // opening quotation mark
+  + escapeStringRegExp(target.name)  // target name
+  + "['\\"]"  // closing quotation mark
+    + ",?$" // optional trailing comma
 )
 
 // The comment is moved and doesn't trigger the eslint rule anymore
@@ -3329,17 +3329,17 @@ function binary() {
 function binaryInBinaryLeft() {
   return (
     // Reason for 42
-    42 *
-      84 +
-    2
+    42
+      * 84
+    + 2
   );
 }
 
 function binaryInBinaryRight() {
   return (
     // Reason for 42
-    42 +
-    84 * 2
+    42
+    + 84 * 2
   );
 }
 
@@ -3592,17 +3592,17 @@ function binary() {
 function binaryInBinaryLeft() {
   return (
     // Reason for 42
-    42 *
-      84 +
-    2
+    42
+      * 84
+    + 2
   )
 }
 
 function binaryInBinaryRight() {
   return (
     // Reason for 42
-    42 +
-    84 * 2
+    42
+    + 84 * 2
   )
 }
 
@@ -4762,8 +4762,8 @@ while (true) {
 }
 
 while (
-  true && // Comment
-  true // Comment
+  true  // Comment
+  && true // Comment
 ) {}
 
 while (true) {} // comment
@@ -4818,8 +4818,8 @@ while (true) {
 }
 
 while (
-  true && // Comment
-  true // Comment
+  true  // Comment
+  && true // Comment
 ) {}
 
 while (true) {} // comment
