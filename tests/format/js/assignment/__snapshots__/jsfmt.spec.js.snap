@@ -18,9 +18,9 @@ computedDescriptionLines = (focused &&
 
 =====================================output=====================================
 const computedDescriptionLines =
-  (showConfirm && descriptionLinesConfirming) ||
-  (focused && !loading && descriptionLinesFocused) ||
-  descriptionLines;
+  (showConfirm && descriptionLinesConfirming)
+  || (focused && !loading && descriptionLinesFocused)
+  || descriptionLines;
 
 computedDescriptionLines =
   (focused && !loading && descriptionLinesFocused) || descriptionLines;
@@ -336,8 +336,8 @@ const areaPercentageDiff = (
 
 =====================================output=====================================
 const areaPercentageDiff = (
-  topRankedZoneFit.areaPercentageRemaining -
-  previousZoneFitNow.areaPercentageRemaining
+  topRankedZoneFit.areaPercentageRemaining
+  - previousZoneFitNow.areaPercentageRemaining
 ).toFixed(2);
 
 ================================================================================
