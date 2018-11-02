@@ -143,9 +143,9 @@ this.intervalID = (setInterval(() => {
 }, 30) satisfies unknown) satisfies number;
 
 =====================================output=====================================
-const extraRendererAttrs = ((attrs.rendererAttrs &&
-  this.utils.safeParseJsonString(attrs.rendererAttrs)) ||
-  Object.create(null)) satisfies FieldService.RendererAttributes
+const extraRendererAttrs = ((attrs.rendererAttrs
+  && this.utils.safeParseJsonString(attrs.rendererAttrs))
+  || Object.create(null)) satisfies FieldService.RendererAttributes
 
 const annotate = (angular.injector satisfies any).$$annotate satisfies (
   fn: Function
@@ -198,9 +198,9 @@ this.intervalID = (setInterval(() => {
 }, 30) satisfies unknown) satisfies number;
 
 =====================================output=====================================
-const extraRendererAttrs = ((attrs.rendererAttrs &&
-  this.utils.safeParseJsonString(attrs.rendererAttrs)) ||
-  Object.create(null)) satisfies FieldService.RendererAttributes;
+const extraRendererAttrs = ((attrs.rendererAttrs
+  && this.utils.safeParseJsonString(attrs.rendererAttrs))
+  || Object.create(null)) satisfies FieldService.RendererAttributes;
 
 const annotate = (angular.injector satisfies any).$$annotate satisfies (
   fn: Function
@@ -849,8 +849,8 @@ const b = \`\${
   (foo + bar) satisfies veryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryLongBaz
 }\`
 const b = \`\${
-  (veryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryLongFoo +
-    veryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryLongBar) satisfies veryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryLongBaz
+  (veryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryLongFoo
+    + veryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryLongBar) satisfies veryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryLongBaz
 }\`
 
 ================================================================================
@@ -880,8 +880,8 @@ const b = \`\${
   (foo + bar) satisfies veryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryLongBaz
 }\`;
 const b = \`\${
-  (veryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryLongFoo +
-    veryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryLongBar) satisfies veryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryLongBaz
+  (veryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryLongFoo
+    + veryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryLongBar) satisfies veryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryLongBaz
 }\`;
 
 ================================================================================
@@ -975,15 +975,15 @@ function foo() {
 }
 
 bifornCringerMoshedPerplexSawder =
-  askTrovenaBeenaDependsRowans +
-  ((glimseGlyphsHazardNoopsTieTie === 0
+  askTrovenaBeenaDependsRowans
+  + ((glimseGlyphsHazardNoopsTieTie === 0
     ? averredBathersBoxroomBuggyNurl
     : anodyneCondosMalateOverateRetinol) satisfies AnnularCooeedSplicesWalksWayWay)
 
 bifornCringerMoshedPerplexSawder =
-  askTrovenaBeenaDependsRowans +
-  ((glimseGlyphsHazardNoopsTieTie === 0 &&
-  kochabCooieGameOnOboleUnweave === Math.PI
+  askTrovenaBeenaDependsRowans
+  + ((glimseGlyphsHazardNoopsTieTie === 0
+  && kochabCooieGameOnOboleUnweave === Math.PI
     ? averredBathersBoxroomBuggyNurl
     : anodyneCondosMalateOverateRetinol) satisfies AnnularCooeedSplicesWalksWayWay)
 
@@ -1077,15 +1077,15 @@ function foo() {
 }
 
 bifornCringerMoshedPerplexSawder =
-  askTrovenaBeenaDependsRowans +
-  ((glimseGlyphsHazardNoopsTieTie === 0
+  askTrovenaBeenaDependsRowans
+  + ((glimseGlyphsHazardNoopsTieTie === 0
     ? averredBathersBoxroomBuggyNurl
     : anodyneCondosMalateOverateRetinol) satisfies AnnularCooeedSplicesWalksWayWay);
 
 bifornCringerMoshedPerplexSawder =
-  askTrovenaBeenaDependsRowans +
-  ((glimseGlyphsHazardNoopsTieTie === 0 &&
-  kochabCooieGameOnOboleUnweave === Math.PI
+  askTrovenaBeenaDependsRowans
+  + ((glimseGlyphsHazardNoopsTieTie === 0
+  && kochabCooieGameOnOboleUnweave === Math.PI
     ? averredBathersBoxroomBuggyNurl
     : anodyneCondosMalateOverateRetinol) satisfies AnnularCooeedSplicesWalksWayWay);
 
