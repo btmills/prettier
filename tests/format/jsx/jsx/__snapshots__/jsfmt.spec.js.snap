@@ -381,23 +381,23 @@ singleQuote: false
 
 <Prettier>
   {(We) =>
-    "The purple monkey danced with a tambourine made of cheese." +
-    "The robot chef cooked a cake that tasted like rainbows." +
-    "The talking pineapple sang a lullaby to the sleepy giraffe."
+    "The purple monkey danced with a tambourine made of cheese."
+    + "The robot chef cooked a cake that tasted like rainbows."
+    + "The talking pineapple sang a lullaby to the sleepy giraffe."
   }
 </Prettier>;
 <Prettier>
   {(We) => (love) =>
-    "The purple monkey danced with a tambourine made of cheese." +
-    "The robot chef cooked a cake that tasted like rainbows." +
-    "The talking pineapple sang a lullaby to the sleepy giraffe."
+    "The purple monkey danced with a tambourine made of cheese."
+    + "The robot chef cooked a cake that tasted like rainbows."
+    + "The talking pineapple sang a lullaby to the sleepy giraffe."
   }
 </Prettier>;
 <Prettier>
   {(We) => (love) => (currying) =>
-    "The purple monkey danced with a tambourine made of cheese." +
-    "The robot chef cooked a cake that tasted like rainbows." +
-    "The talking pineapple sang a lullaby to the sleepy giraffe."
+    "The purple monkey danced with a tambourine made of cheese."
+    + "The robot chef cooked a cake that tasted like rainbows."
+    + "The talking pineapple sang a lullaby to the sleepy giraffe."
   }
 </Prettier>;
 
@@ -473,23 +473,23 @@ singleQuote: false
 
 <Prettier>
   {(We) =>
-    "The purple monkey danced with a tambourine made of cheese." +
-    "The robot chef cooked a cake that tasted like rainbows." +
-    "The talking pineapple sang a lullaby to the sleepy giraffe."
+    "The purple monkey danced with a tambourine made of cheese."
+    + "The robot chef cooked a cake that tasted like rainbows."
+    + "The talking pineapple sang a lullaby to the sleepy giraffe."
   }
 </Prettier>;
 <Prettier>
   {(We) => (love) =>
-    "The purple monkey danced with a tambourine made of cheese." +
-    "The robot chef cooked a cake that tasted like rainbows." +
-    "The talking pineapple sang a lullaby to the sleepy giraffe."
+    "The purple monkey danced with a tambourine made of cheese."
+    + "The robot chef cooked a cake that tasted like rainbows."
+    + "The talking pineapple sang a lullaby to the sleepy giraffe."
   }
 </Prettier>;
 <Prettier>
   {(We) => (love) => (currying) =>
-    "The purple monkey danced with a tambourine made of cheese." +
-    "The robot chef cooked a cake that tasted like rainbows." +
-    "The talking pineapple sang a lullaby to the sleepy giraffe."
+    "The purple monkey danced with a tambourine made of cheese."
+    + "The robot chef cooked a cake that tasted like rainbows."
+    + "The talking pineapple sang a lullaby to the sleepy giraffe."
   }
 </Prettier>;
 
@@ -565,23 +565,23 @@ singleQuote: true
 
 <Prettier>
   {(We) =>
-    'The purple monkey danced with a tambourine made of cheese.' +
-    'The robot chef cooked a cake that tasted like rainbows.' +
-    'The talking pineapple sang a lullaby to the sleepy giraffe.'
+    'The purple monkey danced with a tambourine made of cheese.'
+    + 'The robot chef cooked a cake that tasted like rainbows.'
+    + 'The talking pineapple sang a lullaby to the sleepy giraffe.'
   }
 </Prettier>;
 <Prettier>
   {(We) => (love) =>
-    'The purple monkey danced with a tambourine made of cheese.' +
-    'The robot chef cooked a cake that tasted like rainbows.' +
-    'The talking pineapple sang a lullaby to the sleepy giraffe.'
+    'The purple monkey danced with a tambourine made of cheese.'
+    + 'The robot chef cooked a cake that tasted like rainbows.'
+    + 'The talking pineapple sang a lullaby to the sleepy giraffe.'
   }
 </Prettier>;
 <Prettier>
   {(We) => (love) => (currying) =>
-    'The purple monkey danced with a tambourine made of cheese.' +
-    'The robot chef cooked a cake that tasted like rainbows.' +
-    'The talking pineapple sang a lullaby to the sleepy giraffe.'
+    'The purple monkey danced with a tambourine made of cheese.'
+    + 'The robot chef cooked a cake that tasted like rainbows.'
+    + 'The talking pineapple sang a lullaby to the sleepy giraffe.'
   }
 </Prettier>;
 
@@ -657,23 +657,23 @@ singleQuote: true
 
 <Prettier>
   {(We) =>
-    'The purple monkey danced with a tambourine made of cheese.' +
-    'The robot chef cooked a cake that tasted like rainbows.' +
-    'The talking pineapple sang a lullaby to the sleepy giraffe.'
+    'The purple monkey danced with a tambourine made of cheese.'
+    + 'The robot chef cooked a cake that tasted like rainbows.'
+    + 'The talking pineapple sang a lullaby to the sleepy giraffe.'
   }
 </Prettier>;
 <Prettier>
   {(We) => (love) =>
-    'The purple monkey danced with a tambourine made of cheese.' +
-    'The robot chef cooked a cake that tasted like rainbows.' +
-    'The talking pineapple sang a lullaby to the sleepy giraffe.'
+    'The purple monkey danced with a tambourine made of cheese.'
+    + 'The robot chef cooked a cake that tasted like rainbows.'
+    + 'The talking pineapple sang a lullaby to the sleepy giraffe.'
   }
 </Prettier>;
 <Prettier>
   {(We) => (love) => (currying) =>
-    'The purple monkey danced with a tambourine made of cheese.' +
-    'The robot chef cooked a cake that tasted like rainbows.' +
-    'The talking pineapple sang a lullaby to the sleepy giraffe.'
+    'The purple monkey danced with a tambourine made of cheese.'
+    + 'The robot chef cooked a cake that tasted like rainbows.'
+    + 'The talking pineapple sang a lullaby to the sleepy giraffe.'
   }
 </Prettier>;
 
@@ -1673,8 +1673,8 @@ cable ? (
 // JSX element somewhere in the chain. It is breaking; notice the consequents
 // and alternates in the entire chain get wrapped in parens.
 <div>
-  {properties.length > 1 ||
-  (properties.length === 1 && properties[0].apps.size > 1) ? (
+  {properties.length > 1
+  || (properties.length === 1 && properties[0].apps.size > 1) ? (
     draggingApp == null || newPropertyName == null ? (
       <MigrationPropertyListItem />
     ) : (
@@ -1990,8 +1990,8 @@ cable ? (
 // JSX element somewhere in the chain. It is breaking; notice the consequents
 // and alternates in the entire chain get wrapped in parens.
 <div>
-  {properties.length > 1 ||
-  (properties.length === 1 && properties[0].apps.size > 1) ? (
+  {properties.length > 1
+  || (properties.length === 1 && properties[0].apps.size > 1) ? (
     draggingApp == null || newPropertyName == null ? (
       <MigrationPropertyListItem />
     ) : (
@@ -2307,8 +2307,8 @@ cable ? (
 // JSX element somewhere in the chain. It is breaking; notice the consequents
 // and alternates in the entire chain get wrapped in parens.
 <div>
-  {properties.length > 1 ||
-  (properties.length === 1 && properties[0].apps.size > 1) ? (
+  {properties.length > 1
+  || (properties.length === 1 && properties[0].apps.size > 1) ? (
     draggingApp == null || newPropertyName == null ? (
       <MigrationPropertyListItem />
     ) : (
@@ -2624,8 +2624,8 @@ cable ? (
 // JSX element somewhere in the chain. It is breaking; notice the consequents
 // and alternates in the entire chain get wrapped in parens.
 <div>
-  {properties.length > 1 ||
-  (properties.length === 1 && properties[0].apps.size > 1) ? (
+  {properties.length > 1
+  || (properties.length === 1 && properties[0].apps.size > 1) ? (
     draggingApp == null || newPropertyName == null ? (
       <MigrationPropertyListItem />
     ) : (
@@ -2812,13 +2812,13 @@ singleQuote: false
 <RadioListItem
   key={option}
   imageSource={
-    this.props.veryBigItemImageSourceFunc &&
-    this.props.veryBigItemImageSourceFunc(option)
+    this.props.veryBigItemImageSourceFunc
+    && this.props.veryBigItemImageSourceFunc(option)
   }
   imageSize={this.props.veryBigItemImageSize}
   imageView={
-    this.props.veryBigItemImageViewFunc &&
-    this.props.veryBigItemImageViewFunc(option)
+    this.props.veryBigItemImageViewFunc
+    && this.props.veryBigItemImageViewFunc(option)
   }
   heading={this.props.displayTextFunc(option)}
   value={option}
@@ -3056,13 +3056,13 @@ singleQuote: false
 <RadioListItem
   key={option}
   imageSource={
-    this.props.veryBigItemImageSourceFunc &&
-    this.props.veryBigItemImageSourceFunc(option)
+    this.props.veryBigItemImageSourceFunc
+    && this.props.veryBigItemImageSourceFunc(option)
   }
   imageSize={this.props.veryBigItemImageSize}
   imageView={
-    this.props.veryBigItemImageViewFunc &&
-    this.props.veryBigItemImageViewFunc(option)
+    this.props.veryBigItemImageViewFunc
+    && this.props.veryBigItemImageViewFunc(option)
   }
   heading={this.props.displayTextFunc(option)}
   value={option}
@@ -3300,13 +3300,13 @@ singleQuote: true
 <RadioListItem
   key={option}
   imageSource={
-    this.props.veryBigItemImageSourceFunc &&
-    this.props.veryBigItemImageSourceFunc(option)
+    this.props.veryBigItemImageSourceFunc
+    && this.props.veryBigItemImageSourceFunc(option)
   }
   imageSize={this.props.veryBigItemImageSize}
   imageView={
-    this.props.veryBigItemImageViewFunc &&
-    this.props.veryBigItemImageViewFunc(option)
+    this.props.veryBigItemImageViewFunc
+    && this.props.veryBigItemImageViewFunc(option)
   }
   heading={this.props.displayTextFunc(option)}
   value={option}
@@ -3544,13 +3544,13 @@ singleQuote: true
 <RadioListItem
   key={option}
   imageSource={
-    this.props.veryBigItemImageSourceFunc &&
-    this.props.veryBigItemImageSourceFunc(option)
+    this.props.veryBigItemImageSourceFunc
+    && this.props.veryBigItemImageSourceFunc(option)
   }
   imageSize={this.props.veryBigItemImageSize}
   imageView={
-    this.props.veryBigItemImageViewFunc &&
-    this.props.veryBigItemImageViewFunc(option)
+    this.props.veryBigItemImageViewFunc
+    && this.props.veryBigItemImageViewFunc(option)
   }
   heading={this.props.displayTextFunc(option)}
   value={option}
@@ -3871,8 +3871,8 @@ singleQuote: false
 </div>;
 
 <div>
-  {member.memberName.memberSomething +
-    (member.memberDef.memberSomething.signatures ? "()" : "")}
+  {member.memberName.memberSomething
+    + (member.memberDef.memberSomething.signatures ? "()" : "")}
 </div>;
 
 ================================================================================
@@ -3953,8 +3953,8 @@ singleQuote: false
 </div>;
 
 <div>
-  {member.memberName.memberSomething +
-    (member.memberDef.memberSomething.signatures ? "()" : "")}
+  {member.memberName.memberSomething
+    + (member.memberDef.memberSomething.signatures ? "()" : "")}
 </div>;
 
 ================================================================================
@@ -4035,8 +4035,8 @@ singleQuote: true
 </div>;
 
 <div>
-  {member.memberName.memberSomething +
-    (member.memberDef.memberSomething.signatures ? '()' : '')}
+  {member.memberName.memberSomething
+    + (member.memberDef.memberSomething.signatures ? '()' : '')}
 </div>;
 
 ================================================================================
@@ -4117,8 +4117,8 @@ singleQuote: true
 </div>;
 
 <div>
-  {member.memberName.memberSomething +
-    (member.memberDef.memberSomething.signatures ? '()' : '')}
+  {member.memberName.memberSomething
+    + (member.memberDef.memberSomething.signatures ? '()' : '')}
 </div>;
 
 ================================================================================
