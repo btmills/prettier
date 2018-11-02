@@ -1,9 +1,9 @@
 {
-  "name": "prettier",
+  "name": "@btmills/prettier",
   "version": "2.3.1",
   "description": "Prettier is an opinionated code formatter",
   "bin": "./bin/prettier.js",
-  "repository": "prettier/prettier",
+  "repository": "btmills/prettier",
   "homepage": "https://prettier.io",
   "author": "James Long",
   "license": "MIT",
