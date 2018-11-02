@@ -1,3 +1,66 @@
+# :fork_and_knife: This is a fork.
+
+Compared to `prettier`, `@btmills/prettier` moves binary operators to the beginning of new lines in long expressions instead of the end of the previous line. That's it.
+
+<!-- prettier-ignore -->
+```js
+// prettier:
+const before =
+  bom.length >= 2 &&
+  ((bom.charCodeAt(0) === 0xff && bom.charCodeAt(1) === 0xfe) ||
+    (bom.charCodeAt(0) === 0xfe && bom.charCodeAt(1) === 0xff));
+
+// @btmills/prettier:
+const after =
+  bom.length >= 2
+  && ((bom.charCodeAt(0) === 0xff && bom.charCodeAt(1) === 0xfe)
+    || (bom.charCodeAt(0) === 0xfe && bom.charCodeAt(1) === 0xff));
+```
+
+## Usage
+
+Install using an alias ([npm](https://docs.npmjs.com/cli/v8/commands/npm-install), [yarn](https://yarnpkg.com/lang/en/docs/cli/add/#toc-yarn-add-alias)) so that `require('prettier')` transparently resolves to this fork:
+
+```sh
+npm install --save-dev prettier@npm:@btmills/prettier
+yarn add --dev prettier@npm:@btmills/prettier
+```
+
+This package will function just like `prettier`, and editor integrations should use it as if it were the real thing.
+
+## Releases
+
+Releases of the forked package are done by rebasing the `line-before-operator` branch on top of the most recent version tag in `main`.
+
+```sh
+# Get the latest changes and update the main branch:
+git checkout main
+git pull
+git push fork
+
+# Rebase the release branch on the latest version:
+git checkout line-before-operator
+git rebase x.y.z
+
+# Fix conflicts as necessary.
+git rebase --continue
+# There will be a merge conflict in `yarn.lock`. To resolve it:
+yarn && yarn dedupe && yarn dedupe --check
+# If any conflicts in snapshots, discard and update automatically:
+yarn test -u
+
+# With rebasing done, run tests, push tags, build, and publish:
+yarn run lint
+yarn test
+git tag x.y.z-fork
+git push --force-with-lease
+git push --tags
+yarn run build
+yarn run test:dist
+cd dist
+npm publish
+```
+
 [![Prettier Banner](https://unpkg.com/prettier-logo@1.0.3/images/prettier-banner-light.svg)](https://prettier.io)
 
 <h2 align="center">Opinionated Code Formatter</h2>
