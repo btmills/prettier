@@ -1014,10 +1014,10 @@ printWidth: 80
   <div
     class="not-allowed"
     v-if="
-      value |
-        thisIsARealSuperLongFilterPipe('arg1', arg2) |
-        anotherPipeLongJustForFun |
-        pipeTheThird
+      value
+        | thisIsARealSuperLongFilterPipe('arg1', arg2)
+        | anotherPipeLongJustForFun
+        | pipeTheThird
     "
   ></div>
 </template>
@@ -1072,10 +1072,10 @@ trailingComma: "es5"
   <div
     class="not-allowed"
     v-if="
-      value |
-        thisIsARealSuperLongFilterPipe('arg1', arg2) |
-        anotherPipeLongJustForFun |
-        pipeTheThird
+      value
+        | thisIsARealSuperLongFilterPipe('arg1', arg2)
+        | anotherPipeLongJustForFun
+        | pipeTheThird
     "
   ></div>
 </template>
@@ -1130,10 +1130,10 @@ semi: false
   <div
     class="not-allowed"
     v-if="
-      value |
-        thisIsARealSuperLongFilterPipe('arg1', arg2) |
-        anotherPipeLongJustForFun |
-        pipeTheThird
+      value
+        | thisIsARealSuperLongFilterPipe('arg1', arg2)
+        | anotherPipeLongJustForFun
+        | pipeTheThird
     "
   ></div>
 </template>
@@ -1620,16 +1620,16 @@ printWidth: 80
 <template>
   <pre class="woot">
   123{{
-      wqeqwwqwqweqweqwewwq ||
-        wqeqwwqwqweqweqwewwq ||
-        wqeqwwqwqweqweqwewwq ||
-        wqeqwwqwqweqweqwewwq
+      wqeqwwqwqweqweqwewwq
+        || wqeqwwqwqweqweqwewwq
+        || wqeqwwqwqweqweqwewwq
+        || wqeqwwqwqweqweqwewwq
     }}123
   123{{
-      wqeqwwqwqweqweqwewwq ||
-        wqeqwwqwqweqweqwewwq ||
-        wqeqwwqwqweqweqwewwq ||
-        wqeqwwqwqweqweqwewwq
+      wqeqwwqwqweqweqwewwq
+        || wqeqwwqwqweqweqwewwq
+        || wqeqwwqwqweqweqwewwq
+        || wqeqwwqwqweqweqwewwq
     }}123
     </pre
   >
@@ -1726,16 +1726,16 @@ trailingComma: "es5"
 <template>
   <pre class="woot">
   123{{
-      wqeqwwqwqweqweqwewwq ||
-        wqeqwwqwqweqweqwewwq ||
-        wqeqwwqwqweqweqwewwq ||
-        wqeqwwqwqweqweqwewwq
+      wqeqwwqwqweqweqwewwq
+        || wqeqwwqwqweqweqwewwq
+        || wqeqwwqwqweqweqwewwq
+        || wqeqwwqwqweqweqwewwq
     }}123
   123{{
-      wqeqwwqwqweqweqwewwq ||
-        wqeqwwqwqweqweqwewwq ||
-        wqeqwwqwqweqweqwewwq ||
-        wqeqwwqwqweqweqwewwq
+      wqeqwwqwqweqweqwewwq
+        || wqeqwwqwqweqweqwewwq
+        || wqeqwwqwqweqweqwewwq
+        || wqeqwwqwqweqweqwewwq
     }}123
     </pre
   >
@@ -1832,16 +1832,16 @@ semi: false
 <template>
   <pre class="woot">
   123{{
-      wqeqwwqwqweqweqwewwq ||
-        wqeqwwqwqweqweqwewwq ||
-        wqeqwwqwqweqweqwewwq ||
-        wqeqwwqwqweqweqwewwq
+      wqeqwwqwqweqweqwewwq
+        || wqeqwwqwqweqweqwewwq
+        || wqeqwwqwqweqweqwewwq
+        || wqeqwwqwqweqweqwewwq
     }}123
   123{{
-      wqeqwwqwqweqweqwewwq ||
-        wqeqwwqwqweqweqwewwq ||
-        wqeqwwqwqweqweqwewwq ||
-        wqeqwwqwqweqweqwewwq
+      wqeqwwqwqweqweqwewwq
+        || wqeqwwqwqweqweqwewwq
+        || wqeqwwqwqweqweqwewwq
+        || wqeqwwqwqweqweqwewwq
     }}123
     </pre
   >
