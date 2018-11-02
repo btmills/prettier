@@ -27,8 +27,8 @@ printWidth: 80
   />
   <comp
     :foo="
-      (myFunction<T | U>(qwerty, qwerty.qwerty?.qwerty) as any) +
-      x.filter(abcdefg as never).join(xxx)
+      (myFunction<T | U>(qwerty, qwerty.qwerty?.qwerty) as any)
+      + x.filter(abcdefg as never).join(xxx)
     "
   />
 </template>
@@ -165,10 +165,10 @@ printWidth: 80
     <div
       class="not-allowed"
       v-if="
-        value |
-          thisIsARealSuperLongBitwiseOr('arg1', arg2 as unknown) |
-          anotherBitwiseOrLongJustForFun |
-          bitwiseOrTheThird
+        value
+          | thisIsARealSuperLongBitwiseOr('arg1', arg2 as unknown)
+          | anotherBitwiseOrLongJustForFun
+          | bitwiseOrTheThird
       "
     ></div>
   </div>
