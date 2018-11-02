@@ -161,9 +161,9 @@ printWidth: 80
     | localize: localizationSection;
 @let foo = copyTypes[options.copyType];
 @let foo =
-  listRow.NextScheduledSendStatus == 1 ||
-  listRow.NextScheduledSendStatus == 2 ||
-  listRow.NextScheduledSendStatus == 3;
+  listRow.NextScheduledSendStatus == 1
+  || listRow.NextScheduledSendStatus == 2
+  || listRow.NextScheduledSendStatus == 3;
 @let foo = a;
 @let foo = b;
 @let foo = aNormalValue | aPipe;
