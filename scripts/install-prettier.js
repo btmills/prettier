@@ -1,5 +1,6 @@
 "use strict";
 
+const fs = require("fs");
 const path = require("path");
 const shell = require("shelljs");
 const tempy = require("tempy");
@@ -8,6 +9,9 @@ shell.config.fatal = true;
 
 const rootDir = path.join(__dirname, "..");
 const distDir = path.join(rootDir, "dist");
+const packageName = JSON.parse(
+  fs.readFileSync(path.join(distDir, "package.json"))
+).name;
 
 module.exports = () => {
   const file = shell.exec("npm pack", { cwd: distDir }).stdout.trim();
@@ -19,5 +23,5 @@ module.exports = () => {
   shell.exec(`npm install "${tarPath}"`, { cwd: tmpDir });
   shell.config.silent = false;
 
-  return path.join(tmpDir, "node_modules/prettier");
+  return path.join(tmpDir, "node_modules/" + packageName);
 };
