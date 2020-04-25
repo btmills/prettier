@@ -1,5 +1,6 @@
 "use strict";
 
+const fs = require("fs");
 const path = require("path");
 const shell = require("shelljs");
 const tempy = require("tempy");
@@ -32,5 +33,8 @@ module.exports = (packageDir) => {
 
   shell.exec(installCommand, { cwd: tmpDir });
 
-  return path.join(tmpDir, "node_modules/prettier");
+  const packageName = JSON.parse(
+    fs.readFileSync(path.join(packageDir, "package.json")).toString()
+  ).name;
+  return path.join(tmpDir, "node_modules/" + packageName);
 };
