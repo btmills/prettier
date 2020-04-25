@@ -75,7 +75,10 @@ module.exports = (packageDir) => {
   execaSync(client, installArguments, { cwd: tmpDir });
   fs.unlinkSync(packed);
 
-  const installed = path.join(tmpDir, "node_modules/prettier");
+  const packageName = JSON.parse(
+    fs.readFileSync(path.join(packageDir, "package.json")).toString()
+  ).name;
+  const installed = path.join(tmpDir, "node_modules/" + packageName);
 
   console.log(
     chalk.green(
