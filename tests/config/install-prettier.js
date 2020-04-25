@@ -42,5 +42,8 @@ module.exports = (packageDir) => {
   execa.sync(client, installArguments, { cwd: tmpDir });
   fs.unlinkSync(packed);
 
-  return path.join(tmpDir, "node_modules/prettier");
+  const packageName = JSON.parse(
+    fs.readFileSync(path.join(packageDir, "package.json")).toString()
+  ).name;
+  return path.join(tmpDir, "node_modules/" + packageName);
 };
