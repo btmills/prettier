@@ -21,7 +21,10 @@ if (
   (isProduction && !TEST_STANDALONE && !SKIP_PRODUCTION_INSTALL)
 ) {
   PRETTIER_INSTALLED_DIR = installPrettier(PRETTIER_DIR);
-  PRETTIER_DIR = path.join(PRETTIER_INSTALLED_DIR, "node_modules/prettier");
+  PRETTIER_DIR = path.join(
+    PRETTIER_INSTALLED_DIR,
+    "node_modules/@btmills/prettier"
+  );
 }
 process.env.PRETTIER_INSTALLED_DIR = PRETTIER_INSTALLED_DIR;
 process.env.PRETTIER_DIR = PRETTIER_DIR;

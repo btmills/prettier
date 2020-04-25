@@ -66,7 +66,7 @@ function installPrettier(packageDirectory) {
     case "yarn":
       // yarn fails when engine requirement not compatible by default
       runNpmClient(["config", "set", "nodeLinker", "node-modules"]);
-      runNpmClient(["add", `prettier@file:${packed}`]);
+      runNpmClient(["add", `@btmills/prettier@file:${packed}`]);
     // No default
   }
 
@@ -85,7 +85,7 @@ function installPrettier(packageDirectory) {
 
   fs.writeFileSync(
     path.join(temporaryDirectory, "index-proxy.mjs"),
-    "export * from 'prettier';"
+    "export * from '@btmills/prettier';"
   );
 
   return temporaryDirectory;
