@@ -3,6 +3,7 @@ name: Prod
 on:
   push:
     branches:
+      - line-before-operator
       - master
       - patch-release
   pull_request:

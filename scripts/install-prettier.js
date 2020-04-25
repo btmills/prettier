@@ -1,5 +1,6 @@
 "use strict";
 
+const fs = require("fs");
 const path = require("path");
 const shell = require("shelljs");
 const tempy = require("tempy");
@@ -10,6 +11,9 @@ const rootDir = path.join(__dirname, "..");
 const client = process.env.NPM_CLIENT || "yarn";
 const packageDir =
   process.env.NODE_ENV === "production" ? path.join(rootDir, "dist") : rootDir;
+const packageName = JSON.parse(
+  fs.readFileSync(path.join(packageDir, "package.json")).toString()
+).name;
 
 module.exports = () => {
   const tmpDir = tempy.directory();
@@ -35,5 +39,5 @@ module.exports = () => {
 
   shell.exec(installCommand, { cwd: tmpDir });
 
-  return path.join(tmpDir, "node_modules/prettier");
+  return path.join(tmpDir, "node_modules/" + packageName);
 };
