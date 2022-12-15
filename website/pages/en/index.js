@@ -96,7 +96,7 @@ const TldrSection = ({ language }) => (
         <div style={{ display: "flex", flexDirection: "column" }}>
           <h2>Why?</h2>
           <ul style={{ flex: "1" }}>
-            <li>You press save and code is formatted</li>
+            <li>Your code is formatted on save</li>
             <li>No need to discuss style in code review</li>
             <li>Saves you time and energy</li>
             <li>
@@ -320,7 +320,7 @@ const UsersSection = ({ language }) => {
             <div style={{ marginLeft: ".7em", width: "260px" }}>
               <p>
                 More than{" "}
-                <strong data-placeholder="dependent-github">4.3 million</strong>{" "}
+                <strong data-placeholder="dependent-github">5.1 million</strong>{" "}
                 dependent repositories on GitHub
               </p>
               <Button href="https://github.com/prettier/prettier/network/dependents">
@@ -336,7 +336,7 @@ const UsersSection = ({ language }) => {
             <div style={{ marginLeft: ".7em", width: "260px" }}>
               <p>
                 More than{" "}
-                <strong data-placeholder="dependent-npm">11.3k</strong>{" "}
+                <strong data-placeholder="dependent-npm">12.8k</strong>{" "}
                 dependent packages on npm
               </p>
               <Button href="https://www.npmjs.com/browse/depended/prettier">

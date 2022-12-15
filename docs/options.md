@@ -281,7 +281,7 @@ Valid options:
 - `"lwc"` (same parser as `"html"`, but also formats LWC-specific syntax for unquoted template attributes) _First available in 1.17.0_
 - `"yaml"` (via [yaml](https://github.com/eemeli/yaml) and [yaml-unist-parser](https://github.com/ikatyang/yaml-unist-parser)) _First available in 1.14.0_
 
-[Custom parsers](api.md#custom-parser-api) are also supported. _First available in v1.5.0_
+[Custom parsers](api.md#custom-parser-api) are also supported. _First available in v1.5.0. Deprecated. Will be removed in v3.0.0 (superseded by the Plugin API)_
 
 | Default | CLI Override                                    | API Override                                               |
 | ------- | ----------------------------------------------- | ---------------------------------------------------------- |
@@ -385,7 +385,7 @@ Valid options:
 
 _First available in v1.19.0_
 
-Whether or not to indent the code inside `<script>` and `<style>` tags in Vue files. Some people (like [the creator of Vue](https://github.com/prettier/prettier/issues/3888#issuecomment-459521863)) don’t indent to save an indentation level, but this might break code folding in your editor.
+Whether or not to indent the code inside `<script>` and `<style>` tags in Vue files.
 
 Valid options:
 

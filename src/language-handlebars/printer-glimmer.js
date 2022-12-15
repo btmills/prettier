@@ -96,16 +96,16 @@ function print(path, options, print) {
     case "BlockStatement": {
       const pp = path.getParentNode(1);
 
-      const isElseIf =
+      const isElseIfLike =
         pp &&
         pp.inverse &&
         pp.inverse.body.length === 1 &&
         pp.inverse.body[0] === node &&
-        pp.inverse.body[0].path.parts[0] === "if";
+        pp.inverse.body[0].path.parts[0] === pp.path.parts[0];
 
-      if (isElseIf) {
+      if (isElseIfLike) {
         return [
-          printElseIfBlock(path, print),
+          printElseIfLikeBlock(path, print, pp.inverse.body[0].path.parts[0]),
           printProgram(path, print, options),
           printInverse(path, print, options),
         ];
@@ -562,15 +562,29 @@ function printElseBlock(node, options) {
   ];
 }
 
-function printElseIfBlock(path, print) {
+function printElseIfLikeBlock(path, print, ifLikeKeyword) {
+  const node = path.getValue();
+  let blockParams = [];
+
+  if (isNonEmptyArray(node.program.blockParams)) {
+    blockParams = [line, printBlockParams(node.program)];
+  }
+
   const parentNode = path.getParentNode(1);
 
-  return [
+  return group([
     printInverseBlockOpeningMustache(parentNode),
-    "else if ",
-    printParams(path, print),
+    indent(
+      group([
+        group(["else", line, ifLikeKeyword]),
+        line,
+        printParams(path, print),
+      ])
+    ),
+    indent(blockParams),
+    softline,
     printInverseBlockClosingMustache(parentNode),
-  ];
+  ]);
 }
 
 function printCloseBlock(path, print, options) {
@@ -603,12 +617,12 @@ function blockStatementHasOnlyWhitespaceInProgram(node) {
   );
 }
 
-function blockStatementHasElseIf(node) {
+function blockStatementHasElseIfLike(node) {
   return (
     blockStatementHasElse(node) &&
     node.inverse.body.length === 1 &&
     isNodeOfSomeType(node.inverse.body[0], ["BlockStatement"]) &&
-    node.inverse.body[0].path.parts[0] === "if"
+    node.inverse.body[0].path.parts[0] === node.path.parts[0]
   );
 }
 
@@ -641,7 +655,7 @@ function printInverse(path, print, options) {
       ? [hardline, inverse]
       : inverse;
 
-  if (blockStatementHasElseIf(node)) {
+  if (blockStatementHasElseIfLike(node)) {
     return printed;
   }
 

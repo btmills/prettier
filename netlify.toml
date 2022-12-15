@@ -3,4 +3,8 @@
 
 [build.environment]
   NODE_VERSION = "lts/*"
-  YARN_VERSION = "1.22.15"
+  YARN_VERSION = "1.22.19"
+[[headers]]
+  for = "/worker.js"
+  [headers.values]
+    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-eval'"

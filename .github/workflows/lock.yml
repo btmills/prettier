@@ -2,10 +2,12 @@ name: "Lock"
 
 on:
   schedule:
+    # “At 00:00.” https://crontab.guru/#0_0_*_*_*
     - cron: "0 0 * * *"
 
 jobs:
   lock:
+    if: github.event_name != 'schedule' || github.repository == 'prettier/prettier'
     runs-on: ubuntu-latest
     steps:
       - uses: dessant/lock-threads@v3

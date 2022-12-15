@@ -1,45 +1,53 @@
 "use strict";
 
+const isNonEmptyArray = require("../../../utils/is-non-empty-array.js");
 const visitNode = require("./visit-node.js");
 const throwSyntaxError = require("./throw-syntax-error.js");
 
+// Taken from `typescript` package
+const SyntaxKind = {
+  AbstractKeyword: 126,
+  SourceFile: 308,
+  PropertyDeclaration: 169,
+};
+
+// Copied from https://unpkg.com/typescript@4.8.2/lib/typescript.js
+function getSourceFileOfNode(node) {
+  while (node && node.kind !== SyntaxKind.SourceFile) {
+    node = node.parent;
+  }
+  return node;
+}
+
 // Invalid decorators are removed since `@typescript-eslint/typescript-estree` v4
 // https://github.com/typescript-eslint/typescript-eslint/pull/2375
-function throwErrorForInvalidDecorator(
-  tsNode,
-  esTreeNode,
-  tsNodeToESTreeNodeMap
-) {
-  const tsDecorators = tsNode.decorators;
-  if (!Array.isArray(tsDecorators)) {
+// There is a `checkGrammarDecorators` in `typescript` package, consider use it directly in future
+function throwErrorForInvalidDecorator(tsNode) {
+  const { illegalDecorators } = tsNode;
+  if (!isNonEmptyArray(illegalDecorators)) {
     return;
   }
-  const esTreeDecorators = esTreeNode.decorators;
-  if (
-    !Array.isArray(esTreeDecorators) ||
-    esTreeDecorators.length !== tsDecorators.length ||
-    tsDecorators.some((tsDecorator) => {
-      const esTreeDecorator = tsNodeToESTreeNodeMap.get(tsDecorator);
-      return !esTreeDecorator || !esTreeDecorators.includes(esTreeDecorator);
-    })
-  ) {
-    throwSyntaxError(
-      esTreeNode,
-      "Leading decorators must be attached to a class declaration"
-    );
-  }
+
+  const [{ expression }] = illegalDecorators;
+
+  const sourceFile = getSourceFileOfNode(expression);
+  const [start, end] = [expression.pos, expression.end].map((position) => {
+    const { line, character: column } =
+      sourceFile.getLineAndCharacterOfPosition(position);
+    return { line: line + 1, column };
+  });
+
+  throwSyntaxError({ loc: { start, end } }, "Decorators are not valid here.");
 }
 
 // Values of abstract property is removed since `@typescript-eslint/typescript-estree` v5
 // https://github.com/typescript-eslint/typescript-eslint/releases/tag/v5.0.0
 function throwErrorForInvalidAbstractProperty(tsNode, esTreeNode) {
-  const SYNTAX_KIND_PROPERTY_DEFINITION = 167;
-  const SYNTAX_KIND_ABSTRACT_KEYWORD = 126;
   if (
-    tsNode.kind !== SYNTAX_KIND_PROPERTY_DEFINITION ||
+    tsNode.kind !== SyntaxKind.PropertyDeclaration ||
     (tsNode.modifiers &&
       !tsNode.modifiers.some(
-        (modifier) => modifier.kind === SYNTAX_KIND_ABSTRACT_KEYWORD
+        (modifier) => modifier.kind === SyntaxKind.AbstractKeyword
       ))
   ) {
     return;
@@ -66,7 +74,7 @@ function throwErrorForInvalidNodes(ast, options) {
       return;
     }
 
-    throwErrorForInvalidDecorator(tsNode, esTreeNode, tsNodeToESTreeNodeMap);
+    throwErrorForInvalidDecorator(tsNode);
     throwErrorForInvalidAbstractProperty(tsNode, esTreeNode);
   });
 }

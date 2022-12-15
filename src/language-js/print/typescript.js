@@ -115,6 +115,7 @@ function printTypescript(path, options, print) {
     case "TSAbstractMethodDefinition":
     case "TSDeclareMethod":
       return printClassMethod(path, options, print);
+    case "TSAbstractAccessorProperty":
     case "TSAbstractPropertyDefinition":
       return printClassProperty(path, options, print);
     case "TSInterfaceHeritage":
@@ -148,8 +149,10 @@ function printTypescript(path, options, print) {
       return printTypeParameters(path, options, print, "params");
     case "TSTypeParameter":
       return printTypeParameter(path, options, print);
+    case "TSSatisfiesExpression":
     case "TSAsExpression": {
-      parts.push(print("expression"), " as ", print("typeAnnotation"));
+      const operator = node.type === "TSAsExpression" ? "as" : "satisfies";
+      parts.push(print("expression"), ` ${operator} `, print("typeAnnotation"));
       const parent = path.getParentNode();
       if (
         (isCallExpression(parent) && parent.callee === node) ||

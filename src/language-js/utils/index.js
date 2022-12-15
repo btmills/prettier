@@ -106,7 +106,7 @@ function hasNakedLeftSide(node) {
     node.type === "TaggedTemplateExpression" ||
     node.type === "BindExpression" ||
     (node.type === "UpdateExpression" && !node.prefix) ||
-    node.type === "TSAsExpression" ||
+    isTSTypeExpression(node) ||
     node.type === "TSNonNullExpression"
   );
 }
@@ -883,9 +883,26 @@ function isSimpleCallArgument(node, depth) {
     );
   }
 
+  const targetUnaryExpressionOperators = {
+    "!": true,
+    "-": true,
+    "+": true,
+    "~": true,
+  };
   if (
     node.type === "UnaryExpression" &&
-    (node.operator === "!" || node.operator === "-")
+    targetUnaryExpressionOperators[node.operator]
+  ) {
+    return isSimpleCallArgument(node.argument, depth);
+  }
+
+  const targetUpdateExpressionOperators = {
+    "++": true,
+    "--": true,
+  };
+  if (
+    node.type === "UpdateExpression" &&
+    targetUpdateExpressionOperators[node.operator]
   ) {
     return isSimpleCallArgument(node.argument, depth);
   }
@@ -981,6 +998,7 @@ function startsWithNoLookaheadToken(node, forbidFunctionClassAndDoExpr) {
         node.expressions[0],
         forbidFunctionClassAndDoExpr
       );
+    case "TSSatisfiesExpression":
     case "TSAsExpression":
     case "TSNonNullExpression":
       return startsWithNoLookaheadToken(
@@ -1288,6 +1306,12 @@ const markerForIfWithoutBlockAndSameLineComment = Symbol(
   "ifWithoutBlockAndSameLineComment"
 );
 
+function isTSTypeExpression(node) {
+  return (
+    node.type === "TSAsExpression" || node.type === "TSSatisfiesExpression"
+  );
+}
+
 module.exports = {
   getFunctionParameters,
   iterateFunctionParametersPath,
@@ -1352,4 +1376,5 @@ module.exports = {
   getComments,
   CommentCheckFlags,
   markerForIfWithoutBlockAndSameLineComment,
+  isTSTypeExpression,
 };
