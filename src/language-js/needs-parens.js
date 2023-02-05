@@ -67,17 +67,84 @@ function needsParens(path, options) {
       return true;
     }
 
-    // `for (async of []);` is invalid
+    // `for ((async) of []);` and `for ((let) of []);`
     if (
       name === "left" &&
-      node.name === "async" &&
-      parent.type === "ForOfStatement" &&
-      !parent.await
+      ((node.name === "async" && !parent.await) || node.name === "let") &&
+      parent.type === "ForOfStatement"
     ) {
       return true;
     }
 
+    // `for ((let.a) of []);`
+    if (node.name === "let") {
+      const expression = path.findAncestor(
+        (node) => node.type === "ForOfStatement"
+      )?.left;
+      if (
+        expression &&
+        startsWithNoLookaheadToken(
+          expression,
+          (leftmostNode) => leftmostNode === node
+        )
+      ) {
+        return true;
+      }
+    }
+
+    // `(let)[a] = 1`
+    if (
+      name === "object" &&
+      node.name === "let" &&
+      parent.type === "MemberExpression" &&
+      parent.computed &&
+      !parent.optional
+    ) {
+      const statement = path.findAncestor(
+        (node) =>
+          node.type === "ExpressionStatement" ||
+          node.type === "ForStatement" ||
+          node.type === "ForInStatement"
+      );
+      const expression = !statement
+        ? undefined
+        : statement.type === "ExpressionStatement"
+        ? statement.expression
+        : statement.type === "ForStatement"
+        ? statement.init
+        : statement.left;
+      if (
+        expression &&
+        startsWithNoLookaheadToken(
+          expression,
+          (leftmostNode) => leftmostNode === node
+        )
+      ) {
+        return true;
+      }
+    }
+
     return false;
+  }
+
+  if (
+    node.type === "ObjectExpression" ||
+    node.type === "FunctionExpression" ||
+    node.type === "ClassExpression" ||
+    node.type === "DoExpression"
+  ) {
+    const expression = path.findAncestor(
+      (node) => node.type === "ExpressionStatement"
+    )?.expression;
+    if (
+      expression &&
+      startsWithNoLookaheadToken(
+        expression,
+        (leftmostNode) => leftmostNode === node
+      )
+    ) {
+      return true;
+    }
   }
 
   switch (parent.type) {
@@ -153,24 +220,13 @@ function needsParens(path, options) {
       }
       break;
     }
-    case "ExpressionStatement": {
-      if (
-        startsWithNoLookaheadToken(
-          node,
-          /* forbidFunctionClassAndDoExpr */ true
-        )
-      ) {
-        return true;
-      }
-      break;
-    }
     case "ArrowFunctionExpression": {
       if (
         name === "body" &&
         node.type !== "SequenceExpression" && // these have parens added anyway
         startsWithNoLookaheadToken(
           node,
-          /* forbidFunctionClassAndDoExpr */ false
+          (node) => node.type === "ObjectExpression"
         )
       ) {
         return true;
@@ -456,7 +512,11 @@ function needsParens(path, options) {
         (parent.type === "TSTypeAnnotation" &&
           path.getParentNode(1).type.startsWith("TSJSDoc"))
       );
-
+    case "TSTypeQuery":
+      return (
+        (name === "objectType" && parent.type === "TSIndexedAccessType") ||
+        (name === "elementType" && parent.type === "TSArrayType")
+      );
     case "ArrayTypeAnnotation":
       return parent.type === "NullableTypeAnnotation";
 

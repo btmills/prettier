@@ -6,7 +6,6 @@
     "execa": "execa.js",
     "html-element-attributes": "html-element-attributes.json",
     "html-tag-names": "html-tag-names.json",
-    "html-void-elements": "html-void-elements.json",
     "leven": "leven.js",
     "mem": "mem.js",
     "sdbm": "sdbm.js",
@@ -397,29 +396,6 @@
       ]
     },
     {
-      "name": "html-void-elements",
-      "maintainers": [],
-      "version": "2.0.1",
-      "description": "List of HTML void tag names",
-      "repository": "wooorm/html-void-elements",
-      "homepage": null,
-      "private": false,
-      "license": "MIT",
-      "licenseText": "(The MIT License)\n\nCopyright (c) 2016 Titus Wormer <tituswormer@gmail.com>\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n'Software'), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.\nIN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY\nCLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,\nTORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE\nSOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n",
-      "author": {
-        "name": "Titus Wormer",
-        "email": "tituswormer@gmail.com",
-        "url": "https://wooorm.com"
-      },
-      "contributors": [
-        {
-          "name": "Titus Wormer",
-          "email": "tituswormer@gmail.com",
-          "url": "https://wooorm.com"
-        }
-      ]
-    },
-    {
       "name": "leven",
       "maintainers": [],
       "version": "4.0.0",
@@ -747,7 +723,7 @@
     {
       "name": "fast-glob",
       "maintainers": [],
-      "version": "3.2.11",
+      "version": "3.2.12",
       "description": "It's a very fast and efficient glob library for Node.js",
       "repository": "mrmlnc/fast-glob",
       "homepage": null,
@@ -1185,7 +1161,7 @@
     {
       "name": "fastq",
       "maintainers": [],
-      "version": "1.13.0",
+      "version": "1.14.0",
       "description": "Fast, in memory work queue",
       "repository": {
         "type": "git",
@@ -1252,7 +1228,7 @@
     {
       "name": "ignore",
       "maintainers": [],
-      "version": "5.2.0",
+      "version": "5.2.4",
       "description": "Ignore is a manager and filter for .gitignore rules, the one used by eslint, gitbook and many others.",
       "repository": {
         "type": "git",
@@ -1306,7 +1282,7 @@
     {
       "name": "graceful-fs",
       "maintainers": [],
-      "version": "4.2.9",
+      "version": "4.2.10",
       "description": "A drop-in replacement for fs, making various improvements.",
       "repository": {
         "type": "git",
@@ -1315,7 +1291,7 @@
       "homepage": null,
       "private": false,
       "license": "ISC",
-      "licenseText": "The ISC License\n\nCopyright (c) Isaac Z. Schlueter, Ben Noordhuis, and Contributors\n\nPermission to use, copy, modify, and/or distribute this software for any\npurpose with or without fee is hereby granted, provided that the above\ncopyright notice and this permission notice appear in all copies.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\" AND THE AUTHOR DISCLAIMS ALL WARRANTIES\nWITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF\nMERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR\nANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES\nWHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN\nACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR\nIN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.\n",
+      "licenseText": "The ISC License\n\nCopyright (c) 2011-2022 Isaac Z. Schlueter, Ben Noordhuis, and Contributors\n\nPermission to use, copy, modify, and/or distribute this software for any\npurpose with or without fee is hereby granted, provided that the above\ncopyright notice and this permission notice appear in all copies.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\" AND THE AUTHOR DISCLAIMS ALL WARRANTIES\nWITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF\nMERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR\nANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES\nWHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN\nACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR\nIN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.\n",
       "author": null,
       "contributors": []
     },
@@ -1486,7 +1462,7 @@
     {
       "name": "glob",
       "maintainers": [],
-      "version": "7.2.0",
+      "version": "7.2.3",
       "description": "a little globber",
       "repository": {
         "type": "git",
@@ -1651,7 +1627,7 @@
     {
       "name": "del",
       "maintainers": [],
-      "version": "6.0.0",
+      "version": "6.1.1",
       "description": "Delete files and directories",
       "repository": "sindresorhus/del",
       "homepage": null,

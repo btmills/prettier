@@ -3,6 +3,7 @@
 const {
   printComments,
   printDanglingComments,
+  printCommentsSeparately,
 } = require("../../main/comments.js");
 const {
   builders: {
@@ -24,7 +25,6 @@ const { getLast, getPreferredQuote } = require("../../common/util.js");
 const {
   isJsxNode,
   rawText,
-  isLiteral,
   isCallExpression,
   isStringLiteral,
   isBinaryish,
@@ -278,7 +278,7 @@ function printJsxChildren(
   const parts = [];
   path.each((childPath, i, children) => {
     const child = childPath.getValue();
-    if (isLiteral(child)) {
+    if (child.type === "JSXText") {
       const text = rawText(child);
 
       // Contains a non-whitespace character
@@ -490,7 +490,11 @@ function printJsxAttribute(path, options, print) {
         options.jsxSingleQuote ? "'" : '"'
       );
       final = final.replace(regex, escaped);
-      res = [quote, final, quote];
+      const { leading, trailing } = path.call(
+        () => printCommentsSeparately(path, options),
+        "value"
+      );
+      res = [leading, quote, final, quote, trailing];
     } else {
       res = print("value");
     }
@@ -766,7 +770,7 @@ function printJsx(path, options, print) {
       return printJsxEmptyExpression(path, options /*, print*/);
     case "JSXText":
       /* istanbul ignore next */
-      throw new Error("JSXTest should be handled by JSXElement");
+      throw new Error("JSXText should be handled by JSXElement");
     default:
       /* istanbul ignore next */
       throw new Error(`Unknown JSX node type: ${JSON.stringify(node.type)}.`);
@@ -807,7 +811,7 @@ function isEmptyJsxElement(node) {
   // if there is one text child and does not contain any meaningful text
   // we can treat the element as empty.
   const child = node.children[0];
-  return isLiteral(child) && !isMeaningfulJsxText(child);
+  return child.type === "JSXText" && !isMeaningfulJsxText(child);
 }
 
 // Meaningful if it contains non-whitespace characters,
@@ -818,7 +822,7 @@ function isEmptyJsxElement(node) {
  */
 function isMeaningfulJsxText(node) {
   return (
-    isLiteral(node) &&
+    node.type === "JSXText" &&
     (containsNonJsxWhitespaceRegex.test(rawText(node)) ||
       !/\n/.test(rawText(node)))
   );
@@ -828,7 +832,7 @@ function isMeaningfulJsxText(node) {
 function isJsxWhitespaceExpression(node) {
   return (
     node.type === "JSXExpressionContainer" &&
-    isLiteral(node.expression) &&
+    isStringLiteral(node.expression) &&
     node.expression.value === " " &&
     !hasComment(node.expression)
   );

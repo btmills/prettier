@@ -453,6 +453,9 @@ const propertyLikeNodeTypes = new Set([
   "TSAbstractMethodDefinition",
   "TSDeclareMethod",
   "MethodDefinition",
+  "ClassAccessorProperty",
+  "AccessorProperty",
+  "TSAbstractAccessorProperty",
 ]);
 function handleMethodNameComments({
   comment,
@@ -884,7 +887,9 @@ function handleSwitchDefaultCaseComments({
   if (
     !enclosingNode ||
     enclosingNode.type !== "SwitchCase" ||
-    enclosingNode.test
+    enclosingNode.test ||
+    !followingNode ||
+    followingNode !== enclosingNode.consequent[0]
   ) {
     return false;
   }
